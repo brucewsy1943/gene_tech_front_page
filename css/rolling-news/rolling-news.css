@@ -1,0 +1,32 @@
+#donate_carousel {
+	background-clip:content-box;
+	margin-top:25px;
+	margin-bottom:25px ;
+	height:30px;
+	overflow:hidden;
+	background-color: #CAEBFB;
+}
+.donate_bar {
+	margin-left:30px;
+	padding:0;
+	line-height:30px;
+}
+.donate_bar li {
+	height:30px;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.donate_bar span {
+	font-size:8px;
+	color:royalblue;
+	margin-left:0;
+}
+.donate_bar a {
+	color: #000000;
+	text-decoration:none;
+	font-size:14px;
+	color:#666;
+}
+
+

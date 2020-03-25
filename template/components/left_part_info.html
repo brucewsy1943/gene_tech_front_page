@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.selectActive{
+		background-color: #E4E4E4;
+	}
+</style>
+		<div class="box">
+			<div class="box_1">
+				<div class="userCenterBox">
+					<div class="uc-nav">
+						<div class="login_tab" style="border-top:1px solid #ddd;margin-bottom:0px;"><strong>账号管理</strong></div>
+						<div class="un-list">
+							<ul id="infoItems" style="margin-bottom:0">
+								<!-- <li><a class="u5" href="user.php">个人中心</a></li> -->
+								<li class="u5"><a class="u5" href="../user/user_info.html">个人信息</a></li>
+								<li class="u5"><a class="u5" href="../pi/pi.html">PI认证</a></li>
+								<!-- <li><a class="u6" href="user.php?act=Account_security">账号安全</a></li> -->
+								<li><a class="u7" href="../delivery_address/delivery_address.html">收货地址</a></li>
+								<li><a class="u8" href="../invoice/invoice.html">发票信息</a></li>
+							</ul>
+						</div>
+						<div class="login_tab" style="border-top:1px solid #ddd;margin-bottom:0px;"><strong>订单中心</strong></div>
+						<div  class="un-list">
+							<ul id="orderItems">
+								<li><a class="u1" href="#">我的订单</a></li>
+								
+							</ul>
+						</div>
+						<!-- <div class="login_tab" style="border-top:1px solid #ddd;margin-bottom:0px;"><strong>我的质粒</strong></div>
+						<div class="un-list">
+							<ul>
+								<li><a class="u1" id="startShare" onclick="sharedPlasmid()" style="cursor:pointer;">分享质粒</a></li>
+								<li><a class="u2" href="user.php?act=one_plasmid">待申请质粒</a></li>
+								<li><a class="u2" href="user.php?act=two_plasmid">待签署质粒</a></li>
+								<li><a class="u2" href="user.php?act=three_plasmid">已分享质粒</a></li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <script type="text/javascript" src="../../js/common/jquery-1.11.3.min.js"></script> -->
+		<script type="text/javascript">
+			$.each($("#infoItems").children(),function(){
+				var a_href = $(this).children(":first").attr("href");
+				var a_href_start = a_href.lastIndexOf("\/");
+				var a_href_end = a_href.length;
+				var a_href_substring =  a_href.substring(a_href_start,a_href_end);
+				
+				var page_href = window.location.href;
+				var page_href_start = page_href.lastIndexOf("\/");
+				var page_href_end = page_href.length;
+				var page_href_substring =  page_href.substring(page_href_start,page_href_end);
+				
+				if (a_href_substring.indexOf(page_href_substring)!= -1) {
+					var classNames =  $(this).attr("class");
+					 if ("selectActive".indexOf(classNames) == -1) {
+						$(this).addClass("selectActive")
+					 }else{
+						$(this).removeClass("selectActive")
+					 }
+				} 
+			})
+			
+			$.each($("#orderItems").children(),function(){
+				var a_href = $(this).children(":first").attr("href");
+				var a_href_start = a_href.lastIndexOf("\/");
+				var a_href_end = a_href.length;
+				var a_href_substring =  a_href.substring(a_href_start,a_href_end);
+				
+				var page_href = window.location.href;
+				var page_href_start = page_href.lastIndexOf("\/");
+				var page_href_end = page_href.length;
+				var page_href_substring =  page_href.substring(page_href_start,page_href_end);
+				
+				if (a_href_substring.indexOf(page_href_substring)!= -1) {
+					var classNames =  $(this).attr("class");
+					 if ("selectActive".indexOf(classNames) == -1) {
+						$(this).addClass("selectActive")
+					 }else{
+						$(this).removeClass("selectActive")
+					 }
+				} 
+			})
+			
+			//订单要确认是否已经通过PI才能跳转../order/order_list.html
+			$("#orderItems").children(":first").click(function(){
+				var url = "../order/order_list.html"
+				checkPI(url);
+			})
+			
+			function checkPI(url) {
+				var isPassedPI = checkUserPIState();
+				if (!isPassedPI) {
+					layuiAlert("您的PI认证未通过！<span style='color: red;'>请点击我的账户进行PI认证!</span>")
+				} else {
+					window.location.href = url;
+				}
+			}
+	</script>
+		
+		
+		
+		

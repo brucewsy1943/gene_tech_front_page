@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<style type="text/css">
+	
+</style>
+<div id="top">
+	<div class="top_main">
+		<!-- 加入栅格系统 -->
+		<div class="container-fluid">
+			<div class="row" style="background: #e4e4e4;">
+				<div class="col-xs-12">
+					<span class="fl">您好，欢迎访问基因云！联系电话：181-0160-6266 </span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 col-md-2 col-md-offset-10">
+					<div id="unloginState" class="fr">
+						<div id="ECS_MEMBERZONE">
+							<div class="login-new-user text-center" style="display: block;margin: 0 auto;">
+								<a href="../user/login.html">登录</a>
+								|
+								<a id="register-link" href="../user/login.html">创建帐号</a>
+							</div>
+						</div>
+					</div>
+					<div id="loginState" class="fr" style="display: none;">
+						<div id="ECS_MEMBERZONE">
+							<div class="account-message fl" id="loginName" style="padding: 0 4em;">
+								Hello, wsy
+							</div>
+							<div id="account-menu" class="account-menu fl" style="width:145px;">
+								<div class="dropdown">
+									<span data-toggle="dropdown" id="account-menu-button" class="fr">
+										<span class="glyphicon glyphicon-user"></span>
+										我的账号
+										<b class="caret"></b>
+									</span>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="account-menu-button">
+										<!-- <li><a id="page-top-account" href="user.php">账号信息</a></li>
+										<li class="divider"></li> -->
+										<li><a href="../order/order_list.html" id="menu_open_orders">我的订单</a></li>
+										<!-- <li><a href="/user.php?act=collection_list" id="menu_orders_history">我的收藏</a></li>
+										<li class="divider"></li>
+										<li><a onclick="sharedPlasmid()" style="cursor:pointer;" id="menu_my_plasmids">分享质粒</a></li>
+										<li><a href="/user.php?act=one_plasmid" id="menu_my_articles">待申请的质粒</a></li>
+										<li><a href="#" id="menu_my_articles">待签署的质粒</a></li>
+										<li class="divider"></li> -->
+										<li><a id="logout" href="javascript:logout()">退出账号</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="header" style="display:block;">
+	<div class="header_main" id="top_header" style="display: block; height: auto;">
+		<div class="row">
+			<div class="col-xs-12 col-lg-4">
+				<div class="fl clearfix" style="width: 100%;">
+					<!-- 加媒体查询 -->
+					<div class="logo" style="text-align: center;">
+						<!-- <a href="#" name="top"> -->
+							<img style="height: 100%;width: 80%;" src="../../img/logo.gif">
+						<!-- </a> -->
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-lg-8">
+				<div class="fr clearfix">
+					<form id="search_form" name="searchForm" method="get" action="#">
+						<input name="keywords" type="text" id="keyword" placeholder="搜索质粒" class="search-input" style="color:#999;">
+						<button type="submit" id="search_submit_id" onclick="searchByKeyWord()">
+							搜索
+						</button>
+					</form>
+					<div class="fr issue_demand">
+						<span class="publish"><a href="../shopping/shop_cart_list.html">我的购物车</a></span>
+						<!-- <div class="drop_down">
+							<div class="post_demand">
+								<ul id="cart-menu-items" class="ul_list">
+									<li style="margin-top:20px;">
+										<a href="#">您的购物车是空的！</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a id="checkout-button" href="#" class="btn btn-default btn-addgene-orange">
+											进入基因库
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div> -->
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="header_main fixed" id="fixed" style="display: none;">
+		<div class="fl clearfix">
+			<div class="logo">
+				<a href="#" name="top"><img style="height:50px;" src="../../img/logo.gif"></a></div>
+		</div>
+		<div class="fr clearfix">
+			<form id="search_form" name="searchForm" method="get" action="#">
+				<input name="keywords" type="text" id="keyword" placeholder="搜索质粒" class="search-input" style="color:#999;">
+				<button type="submit" id="search_submit_id">
+					搜索
+				</button>
+			</form>
+			<div class="fr issue_demand">
+				<span class="publish">我的购物车</span>
+				<div class="drop_down">
+					<div class="post_demand">
+						<ul id="cart-menu-items" class="ul_list">
+							<li style="margin-top:20px;">
+								<a href="JavaScript:;">您的购物车是空的！</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a id="checkout-button" href="#" class="btn btn-default btn-addgene-orange">
+									进入基因库
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+	<div class="nav-bar container-fluid">
+		<ul class="main-nav row">
+			<li class="active col-xs-2" style="padding: 0;">
+				<a href="../index/index.html">首页</a>
+			</li>
+			<li class="col-xs-2" style="padding: 0;">
+				<a href="../plasmid/plasmid_list.html">载体库</a>
+			</li>
+			<li class="col-xs-2">
+				<a href="#">分享</a>
+			</li>
+			<li class="col-xs-2" style="padding: 0;">
+				<a href="../questions/questions.html">问题</a>
+			</li>
+			<li class="col-xs-2" style="padding: 0;">
+				<a href="../science/science_news.html">动态</a>
+			</li>
+		</ul>
+	</div>
+	<!-- <div class="navbar-dropdown">
+		<div class="navbar-dropdown-category column-0" style="display: none;"></div>
+		<div class="navbar-dropdown-category column-1" style="display: none;">
+			<div class="navbar-dropdown-category-list">
+				<div class="category-item">
+					<div class="category-item-title animate-text" data-index="0">
+						查找质粒
+					</div>
+					<ul>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/search.php">快速检索</a></li>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/browse.php">浏览质粒</a></li>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/article-39.html">搜索指南</a></li>
+					</ul>
+				</div>
+				<div class="category-item">
+					<div class="category-item-title animate-text" data-index="0">
+						订购指南
+					</div>
+					<ul>
+						<li><a href="http://jiyin.org/article-45.html">订购教程</a></li>
+						<li><a href="http://jiyin.org/article-42.html">发票信息与物流</a></li>
+						<li><a href="http://jiyin.org/article-41.html">材料转移协议</a></li>
+						<li><a href="http://jiyin.org/article-43.html">产品声明</a></li>
+						<li><a href="http://jiyin.org/article-44.html">收货后操作指南</a></li>
+					</ul>
+				</div>
+				<div class="category-item">
+					<div class="category-item-title animate-text" data-index="0">
+						海外代购服务
+					</div>
+					<ul>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/dg-apply.php">提交代购申请</a></li>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/article-38.html">代购服务说明</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-dropdown-category column-2" style="display: none;">
+			<div class="navbar-dropdown-category-list">
+				<div class="category-item">
+					<div class="category-item-title animate-text" data-index="0">
+						分享平台
+					</div>
+					<ul>
+						<li class="animate-text" data-index="1"><a onclick="sharedPlasmid()" style="cursor:pointer;">开始分享</a></li>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/user.php?act=three_plasmid">我的质粒</a></li>
+						<li class="animate-text" data-index="1"><a href="http://jiyin.org/article-47.html">分享操作指南</a></li>
+					</ul>
+				</div>
+				<div class="category-item">
+					<div class="category-item-title animate-text" data-index="0">
+						分享相关
+					</div>
+					<ul>
+						<li><a href="http://jiyin.org/article-48.html">关于分享</a></li>
+						<li><a href="http://jiyin.org/article-49.html">材料分享协议</a></li>
+						<li><a href="http://jiyin.org/article-50.html">积分系统</a></li>
+						<li><a href="http://jiyin.org/article-51.html">负责人认证</a></li>
+						<li><a href="http://jiyin.org/article-52.html">材料邮寄与验证</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-dropdown-category column-3" style="display: none;"></div>
+	</div>-->
+	</div>
+<script src="../../js/plasmid/plasmid_list.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var sessionStorage = window.sessionStorage;
+
+	function changeLoginState() {
+		var loginName = sessionStorage.getItem("loginName");
+		if (loginName != null && loginName != "") {
+			$("#unloginState").hide();
+			$("#loginState").show();
+		}
+	}
+	changeLoginState();
+
+	//退出账号
+	function logout() {
+		//清除缓存
+		sessionStorage.clear();
+
+		//后续添加后台的退出登录
+
+
+		window.location.href = "../../template/user/login.html";
+	}
+
+	function searchByKeyWord() {
+		var keyword = $("#keyword").val();
+		search(1, 10, keyword);
+	}
+</script>

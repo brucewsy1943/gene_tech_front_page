@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://jiyin.org/user.php?act=shared_plasmid -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>用户中心_肿瘤基因测序_T细胞特异性检测_新生抗原预测-【基因云】</title>
+    
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="icon" href="http://jiyin.org/animated_favicon.gif" type="image/gif">
+    <link rel="alternate" type="application/rss+xml" title="RSS|用户中心_肿瘤基因测序_T细胞特异性检测_新生抗原预测-【基因云】" href="http://jiyin.org/user.php?act=shared_plasmid">
+    <link rel="stylesheet" href="./添加质粒_files/c2dcefd770cc.css" type="text/css">
+    <link rel="stylesheet" href="./添加质粒_files/4fb4e08dbf6b.css" type="text/css">
+    <link rel="stylesheet" href="./添加质粒_files/slider.css">
+    <link rel="stylesheet" href="./添加质粒_files/animate.min.css">
+    <link href="./添加质粒_files/style.css" rel="stylesheet" type="text/css">
+    <style>
+        #ie7-register-link {
+            display: none
+        }
+
+        html.lt-ie8 #register-link {
+            display: none;
+        }
+
+        html.lt-ie8 #ie7-register-link {
+            display: inline;
+        }
+        .homepage-section .col-xs-3{padding: 0 15px;}
+        .homepage-section .col-xs-3:first-child{padding-left: 0;}
+        .homepage-section .col-xs-3:last-child{padding-right: 0;}
+    </style>
+    <style>
+        .slideshow-cont {
+            background: linear-gradient(
+                    to bottom,
+                    #0081c6 0%,
+                    #00a2e4 0%,
+                    #00336f 92.4%,
+                    #d9ecf7 92.5%,
+                    #d9ecf7 100%
+            );
+            height: 347px;
+            min-width: 960px;
+            margin-bottom: 10px;
+        }
+    </style>
+<link rel="stylesheet" href="./添加质粒_files/layer.css" id="layuicss-skinlayercss"><link id="layuicss-layer" rel="stylesheet" href="./添加质粒_files/layer(1).css" media="all"></head>
+<body class="">
+ <script type="text/javascript" src="./添加质粒_files/jquery-1.11.3.min.js.下载"></script><script type="text/javascript" src="./添加质粒_files/jquery.json.js.下载"></script><script type="text/javascript" src="./添加质粒_files/bootstrap.js.下载"></script> <script type="text/javascript" src="./添加质粒_files/transport_jquery.js.下载"></script><script type="text/javascript" src="./添加质粒_files/utils.js.下载"></script> <script type="text/javascript" src="./添加质粒_files/common.js.下载"></script><script type="text/javascript" src="./添加质粒_files/global.js.下载"></script><script type="text/javascript" src="./添加质粒_files/compare.js.下载"></script><script type="text/javascript" src="./添加质粒_files/user.js.下载"></script> <script src="./添加质粒_files/layer.js.下载"></script>
+ <script src="./添加质粒_files/layui.js.下载"></script>
+ <script src="./添加质粒_files/index.js.下载"></script>
+ <link rel="stylesheet" href="./添加质粒_files/layui.css" type="text/css">
+ <link rel="stylesheet" href="./添加质粒_files/bootstrap.css" type="text/css">
+<header>
+          <div id="top">
+            <div class="top_main">
+              <span class="fl">您好，欢迎访问基因云</span>
+              <div class="fr">
+                <div id="ECS_MEMBERZONE">		<div class="account-message fl" id="index_welcome" style="padding: 0 4em;">
+		Hello, wsy	</div>
+	<div id="account-menu" class="account-menu fl" style="width:145px;">
+		<div class="dropdown">
+			<span data-toggle="dropdown" id="account-menu-button" class="fr">
+				<span class="glyphicon glyphicon-user"></span>
+				我的账号
+				<b class="caret"></b>
+			</span>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="account-menu-button">
+				<li><a id="page-top-account" href="http://jiyin.org/user.php">账号信息</a></li>
+				<li class="divider"></li>
+				<li><a href="http://jiyin.org/user.php?act=order_list" id="menu_open_orders">我的订单</a></li>
+				<li><a href="http://jiyin.org/user.php?act=collection_list" id="menu_orders_history">我的收藏</a></li>
+				<li class="divider"></li>
+				<li><a onclick="sharedPlasmid()" style="cursor:pointer;" id="menu_my_plasmids">分享质粒</a></li>
+				<li><a href="http://jiyin.org/user.php?act=one_plasmid" id="menu_my_articles">待申请的质粒</a></li>
+				<li><a href="http://jiyin.org/user.php?act=shared_plasmid#" id="menu_my_articles">待签署的质粒</a></li>
+				<li class="divider"></li>
+				<li><a id="logout" href="http://jiyin.org/user.php?act=logout">退出账号</a></li>
+			</ul>
+		</div>
+	</div>
+		 </div>
+              </div>
+            </div>
+          </div>
+          <div id="header" style="display:block;" class="">
+            <div class="header_main" id="top_header" style="display: block; height: 60px;">
+              <div class="fl clearfix">
+                <div class="logo"><a href="http://jiyin.org/index.html" name="top"><img style="height: 75px;margin-top: -10px;" src="./添加质粒_files/logo.gif"></a></div>
+              </div>
+              <div class="fr clearfix">
+                     <form id="search_form" name="searchForm" method="get" action="http://jiyin.org/search.php" onsubmit="return checkSearchForm()">
+                            <input name="keywords" type="text" id="keyword" placeholder="搜索质粒" class="search-input" style="color:#999;">
+                       <button type="submit" id="search_submit_id">
+                        搜索
+                      </button>
+                     </form>
+                     <div class="fr issue_demand">
+                       <span class="publish">我的购物车</span>
+                       <div class="drop_down">
+                           <div class="post_demand">
+                              <ul id="cart-menu-items" class="ul_list">
+	 <li style="margin-top:20px;">
+		 <a href="JavaScript:;">您的购物车是空的！</a>
+	 </li>
+	 <li class="divider"></li>
+	 <li>
+		 <a id="checkout-button" href="http://jiyin.org/search.php" class="btn btn-default btn-addgene-orange">
+			 进入基因库
+		 </a>
+	 </li>
+ </ul>
+                           </div>
+                       </div>
+                     </div>
+              </div>
+            </div>
+            <div class="header_main fixed" id="fixed" style="display: none;">
+              <div class="fl clearfix">
+                <div class="logo"><a href="http://jiyin.org/index.html" name="top"><img style="height:50px;" src="./添加质粒_files/logo.gif"></a></div>
+              </div>
+              <div class="fr clearfix">
+                     <form id="search_form" name="searchForm" method="get" action="http://jiyin.org/search.php" onsubmit="return checkSearchForm()">
+                            <input name="keywords" type="text" id="keyword" placeholder="搜索质粒" class="search-input" style="color:#999;">
+                       <button type="submit" id="search_submit_id">
+                        搜索
+                      </button>
+                     </form>
+                     <div class="fr issue_demand">
+                       <span class="publish">我的购物车</span>
+                       <div class="drop_down">
+                           <div class="post_demand">
+                                <ul id="cart-menu-items" class="ul_list">
+	 <li style="margin-top:20px;">
+		 <a href="JavaScript:;">您的购物车是空的！</a>
+	 </li>
+	 <li class="divider"></li>
+	 <li>
+		 <a id="checkout-button" href="http://jiyin.org/search.php" class="btn btn-default btn-addgene-orange">
+			 进入基因库
+		 </a>
+	 </li>
+ </ul>
+                           </div>
+                       </div>
+                     </div>
+              </div>
+            </div>
+          </div>
+          <div id="nav">
+            <div class="nav-bar">
+              <ul class="main-nav">
+                <li class="active index">
+                  <a href="http://jiyin.org/index.html">首页</a>
+                </li>
+                <li>
+                  <a href="javascript:oid(0)">质粒载体库</a>
+                </li>
+                <li>
+                  <a href="javascript:oid(0)">质粒分享</a>
+                </li>
+                <li>
+                  <a href="http://jiyin.org/article_show.php">常见问题</a>
+                </li>
+				<li>
+                  <a href="http://jiyin.org/article_cat-14.html">科研动态</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-dropdown">
+              <div class="navbar-dropdown-category column-0"></div>
+              <div class="navbar-dropdown-category column-1">
+                <div class="navbar-dropdown-category-list">
+                  <div class="category-item">
+                    <div class="category-item-title animate-text" data-index="0">
+                        查找质粒
+                    </div>
+                    <ul>
+                     <li class="animate-text" data-index="1"><a href="http://jiyin.org/search.php">快速检索</a></li>
+                     <li class="animate-text" data-index="1"><a href="http://jiyin.org/browse.php">浏览质粒</a></li>
+                     <li class="animate-text" data-index="1"><a href="http://jiyin.org/article-39.html">搜索指南</a></li>
+                    </ul>
+                  </div>
+                  <div class="category-item">
+                    <div class="category-item-title animate-text" data-index="0">
+                        订购指南
+                    </div>
+                    <ul>
+                      <li><a href="http://jiyin.org/article-45.html">订购教程</a></li>
+                      <li><a href="http://jiyin.org/article-42.html">发票信息与物流</a></li>
+                      <li><a href="http://jiyin.org/article-41.html">材料转移协议</a></li>
+                      <li><a href="http://jiyin.org/article-43.html">产品声明</a></li>
+                      <li><a href="http://jiyin.org/article-44.html">收货后操作指南</a></li>
+                    </ul>
+                  </div>
+                  <div class="category-item">
+                    <div class="category-item-title animate-text" data-index="0">
+                        海外代购服务
+                    </div>
+                    <ul>
+                      <li class="animate-text" data-index="1"><a href="http://jiyin.org/dg-apply.php">提交代购申请</a></li>
+                      <li class="animate-text" data-index="1"><a href="http://jiyin.org/article-38.html">代购服务说明</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-dropdown-category column-2">
+                <div class="navbar-dropdown-category-list">
+                  <div class="category-item">
+                    <div class="category-item-title animate-text" data-index="0">
+                        分享平台
+                    </div>
+                    <ul>
+                     <li class="animate-text" data-index="1"><a onclick="sharedPlasmid()" style="cursor:pointer;">开始分享</a></li>
+                     <li class="animate-text" data-index="1"><a href="http://jiyin.org/user.php?act=three_plasmid">我的质粒</a></li>
+                     <li class="animate-text" data-index="1"><a href="http://jiyin.org/article-47.html">分享操作指南</a></li>
+                    </ul>
+                  </div>
+                  <div class="category-item">
+                    <div class="category-item-title animate-text" data-index="0">
+                        分享相关
+                    </div>
+                    <ul>
+                      <li><a href="http://jiyin.org/article-48.html">关于分享</a></li>
+                      <li><a href="http://jiyin.org/article-49.html">材料分享协议</a></li>
+                      <li><a href="http://jiyin.org/article-50.html">积分系统</a></li>
+                      <li><a href="http://jiyin.org/article-51.html">负责人认证</a></li>
+                      <li><a href="http://jiyin.org/article-52.html">材料邮寄与验证</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-dropdown-category column-3"></div>
+            </div>
+         </div>
+</header>
+<script src="./添加质粒_files/cookie.js.下载"></script>
+<script type="text/javascript">
+        $(".issue_demand").mouseover(function(){
+          $(".drop_down").css({
+            "display":"block"
+          })
+        })
+        $(".issue_demand").mouseout(function(){
+          $(".drop_down").css({
+            "display":"none"
+          })
+        })
+        var url = window.location.href;
+        var Str = url.indexOf("http://jiyin.org/user.php?act=share_detial");
+        var Str2 = url.indexOf("http://jiyin.org/user.php?act=shared_plasmid");
+        if(Str == 0 && Str2 == 0){
+        }else if(Str == -1 && Str2 == -1){
+          delCookie("share");
+          delCookie("id");
+        }
+        // if(window.location.href != "http://jiyin.org/user.php?act=shared_plasmid"&&window.location.href != "http://jiyin.org/user.php?act=share_detial"){
+        //           delCookie("share");
+        //           delCookie("id");
+        // }
+</script>
+<link rel="stylesheet" href="./添加质粒_files/share.css" type="text/css">
+<style media="screen">
+  #edit-plasmid-top .active>a:hover{
+    color: #fff;
+    background-color: #337ab7!important;
+  }
+</style>
+<!-- <script type="text/javascript" src="themes/ecmoban_meilishuo/js/mzp-packed-me.js"></script> -->
+<script type="text/javascript" src="./添加质粒_files/guide.js.下载"></script>
+
+<div class="block box">
+ <div id="ur_here">
+<div class="block box">
+
+ <div id="ur_here">
+当前位置: <a href="http://jiyin.org/">首页</a> 用户中心</div>
+</div>
+</div>
+</div>
+
+
+<div class="block">
+  <div id="page-body">
+    <main>
+      <div class="share">
+        <section>
+          <h2 class="share_title">添加质粒</h2>
+          <p>
+            <strong>说明:</strong>输入质粒名称，质粒类型和质粒使用的一个句子描述，然后单击添加按钮。点击“输入数据”或“完成/更新”按钮输入或修改数据。请仅包括实验室中已经构建的那些质粒。您的进度目前已保存到您的Addgene帐户，您可以随时返回以编辑或完成您的存款。请注意，一旦您要求存款套件，您将无法再修改质粒信息。
+          </p>
+          <div class="panel panel-default margin-top">
+            <div class="panel-body">
+              <form id="add-plasmid-form" action="http://jiyin.org/plasmids/articles/28192074/add-plasmid/" method="POST" onsubmit="return false" class="form form-inline" style="margin-bottom: 20px;">
+              <input type="hidden" name="csrfmiddlewaretoken" value="iw5sDNjy9eWDzFgnmI0X259j1EVZLAb6">
+              <div class="row row-vertically-centered">
+                  <div class="col-xs-8 share-form" style="padding-left: 0;">
+                    <div id="div_id_name" class="form-group required col-xs-12" style="padding-left:0px;">
+                      <label for="id_name" class="control-label required-field ">
+                        <em class="red">*</em>质粒名称
+                      </label>
+                      <div class="">
+                          <input class="form-control" id="add-new-name" maxlength="128" name="name" placeholder="示例：pEGFP-N3、pT7-His" type="text">
+                      </div>
+                    </div>
+                    <div id="div_id_type" class="form-group   required col-xs-12" style="padding-left:0px;">
+                      <label for="id_type" class="control-label required-field ">
+                          <em class="red">*</em>质粒类型
+                        <a href="javascript:;" data-toggle="modal" data-target="#add-plasmid-help" data-remote="false" data-backdrop="false">
+                          <span class="glyphicon glyphicon-question-sign" style="position: relative; top: 2px;" id="tips1"></span>
+                          <script type="text/javascript">
+                            $("#tips1").click(function(){
+                              layer.open({
+                                title:'质粒类型选择指南',
+                                shadeClose:true,
+                                type: 1,
+                                anim: 4,
+                                skin: 'layui-layer-lan', //加上边框
+                                area: ['500px', '300px'], //宽高
+                                content: $('#tips1_contant')
+                              });
+                            })
+                          </script>
+                        </a>
+                      </label>
+                      <div class="">
+                        <select class="form-control" id="id_type" name="type">
+                          <option value="" selected="selected">---------</option>
+                          <option value="700">编码一个插入基因</option>
+                          <option value="703">编码gRNA/shRNA</option>
+                          <option value="702">空载体</option>
+                          <option value="701">编码多个插入基因</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div id="div_id_description" class="form-group   required col-xs-12" style="padding-left:0px;">
+                      <label for="id_description" class="control-label required-field ">
+                          <em class="red">*</em>质粒用途、功能简述（100字以内）
+                      </label>
+                      <div class="">
+                          <input class="form-control" id="id_description" maxlength="200" name="description" placeholder="示例：哺乳动物EGFP荧光蛋白载体、含35S启动子的植物细胞过表达载体" size="60" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <input type="hidden" name="share_name" value="wsy">
+                      <input id="add_plasmid" type="submit" class="btn btn-lg btn-primary" onclick="addPlasmid()" value="添加质粒">
+                  </div>
+              </div>
+              </form>
+              <table class="layui-table" id="layui-table" lay-data="{height:315, url:&#39;/user.php?act=shared_cookie&#39;, id:&#39;test&#39;}" lay-filter="demo1">
+                <thead>
+                  <tr>
+                    <th lay-data="{field:&#39;id&#39;, width:60, sort: true}">ID</th>
+                    <th lay-data="{field:&#39;name&#39;, width:130}">质粒名称</th>
+                    <th lay-data="{field:&#39;type&#39;, width:200,templet: &#39;#typTpl2&#39;, style:&#39;cursor: pointer;&#39;, sort: true}">质粒类型</th>
+                    <th lay-data="{field:&#39;description&#39;, width:398, event: &#39;setSign&#39;, style:&#39;cursor: pointer;&#39;}">质粒描述</th>
+                    <th lay-data="{field:&#39;status&#39;, width:140, sort: true, templet: &#39;#sexTpl&#39;}">状态</th>
+                    <!-- <th lay-data="{field:'status', width:80,templet: '#sexTpl'}">状态</th> -->
+                    <th lay-data="{fixed: &#39;right&#39;, width:232, align:&#39;center&#39;, toolbar: &#39;#barDemo&#39;}">操作</th>
+                  </tr>
+                </thead>
+              </table><div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-1" style=" height:315px;"><div class="layui-table-header"><table cellspacing="0" cellpadding="0" border="0" class="layui-table"><thead><tr><th data-field="id"><div class="layui-table-cell laytable-cell-1-id"><span>ID</span><span class="layui-table-sort layui-inline"><i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i></span></div></th><th data-field="name"><div class="layui-table-cell laytable-cell-1-name"><span>质粒名称</span></div></th><th data-field="type"><div class="layui-table-cell laytable-cell-1-type"><span>质粒类型</span><span class="layui-table-sort layui-inline"><i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i></span></div></th><th data-field="description"><div class="layui-table-cell laytable-cell-1-description"><span>质粒描述</span></div></th><th data-field="status"><div class="layui-table-cell laytable-cell-1-status"><span>状态</span><span class="layui-table-sort layui-inline"><i class="layui-edge layui-table-sort-asc"></i><i class="layui-edge layui-table-sort-desc"></i></span></div></th><th data-field="5"><div class="layui-table-cell laytable-cell-1-5" align="center"><span>操作</span></div></th></tr></thead></table></div><div class="layui-table-body layui-table-main" style="height: 277px;"><table cellspacing="0" cellpadding="0" border="0" class="layui-table"><tbody></tbody></table><div class="layui-none">无数据</div></div><style>.laytable-cell-1-id{ width:60px }.laytable-cell-1-name{ width:130px }.laytable-cell-1-type{ width:200px }.laytable-cell-1-description{ width:398px }.laytable-cell-1-status{ width:140px }.laytable-cell-1-5{ width:232px }</style></div>
+              <div class="">
+                <a href="http://jiyin.org/user.php?act=one_plasmid" class="btn btn-primary">开始分享质粒</a>
+              </div>
+              <script type="text/html" id="sexTpl">
+                {{#  if(d.status === '质粒信息未完善'){}}
+                  <span style="color: red;">{{d.status}}</span>
+                {{#} else {}}
+                  <span style="color: green;">{{d.status}}</span>
+                {{#} }}
+              </script>
+              <script type="text/html" id="typTpl2">
+                {{#  if(d.type === '701'){}}
+                  <span>编码多个插入基因</span>
+                {{#}  else if(d.type === '702'){}}
+                  <span>空载体</span>
+                {{#}  else if(d.type === '703'){}}
+                  <span>编码gRNA/shRNA</span>
+                {{#} else {}}
+                  <span>编码一个插入基因</span>
+                {{#} }}
+              </script>
+              <script type="text/html" id="barDemo">
+                <a class="layui-btn layui-btn-mini" lay-event="edit1">完善信息</a>
+                <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del1">删除</a>
+              </script>
+              <script type="text/javascript">
+                  layui.use('table', function(){
+                    var table = layui.table;
+                    //监听表格复选框选择
+                    table.on('checkbox(demo1)', function(obj){
+                      console.log(obj)
+                    });
+                    //监听工具条
+                    table.on('tool(demo1)', function(obj){
+                      var data = obj.data;
+                      if(obj.event === 'del1'){
+                        layer.confirm('真的删除行么', function(index){
+                          var cookie = getCookie("share");
+                          var str = JSON.stringify(data);
+                          var str = str + ",";
+                          var cookie2 = cookie.replace(str, '');
+                          setCookie("share",cookie2)
+                          obj.del();
+                          layer.close(index);
+                        });
+                      } else if(obj.event === 'edit1'){
+                         window.location.href = "/user.php?act=share_detial&plasmid_name="+obj.data.name+"&step=1";
+                      }
+                    });
+
+                    var $ = layui.$, active = {
+                      getCheckData: function(){ //获取选中数据
+                        var checkStatus = table.checkStatus('idTest')
+                        ,data = checkStatus.data;
+                        layer.alert(JSON.stringify(data));
+                      }
+                      ,getCheckLength: function(){ //获取选中数目
+                        var checkStatus = table.checkStatus('idTest')
+                        ,data = checkStatus.data;
+                        layer.msg('选中了：'+ data.length + ' 个');
+                      }
+                      ,isAll: function(){ //验证是否全选
+                        var checkStatus = table.checkStatus('idTest');
+                        layer.msg(checkStatus.isAll ? '全选': '未全选')
+                      }
+                    };
+
+                    $('.demoTable .layui-btn').on('click', function(){
+                      var type = $(this).data('type');
+                      active[type] ? active[type].call(this) : '';
+                    });
+                  });
+              </script>
+              </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="./添加质粒_files/share.js.下载"></script><script type="text/javascript">
+  $(".tips2_contant").click(function () {
+    layer.open({
+      title:'融合蛋白/标签位置说明',
+      shadeClose:true,
+      type: 1,
+      anim: 4,
+      skin: 'layui-layer-lan', //加上边框
+      area: ['640px', '400px'], //宽高
+      content: $('#tips2_contant')
+    });
+  })
+  $(".tips3_contant").click(function () {
+    layer.open({
+      title:'生物安全性声明',
+      shadeClose:true,
+      type: 1,
+      anim: 4,
+      skin: 'layui-layer-lan', //加上边框
+      area: ['400px', '200px'], //宽高
+      content: $('#tips3_contant')
+    });
+  })
+</script>
+<br>
+<b>Warning</b>:  file_put_contents(C:/wwwroot/jiyin/temp/compiled/page_footer.lbi.php): failed to open stream: Permission denied in <b>C:\wwwroot\jiyin\includes\cls_template.php</b> on line <b>262</b><br>
+<br>
+<b>Notice</b>:  can't write:C:/wwwroot/jiyin/temp/compiled/page_footer.lbi.php in <b>C:\wwwroot\jiyin\includes\cls_template.php</b> on line <b>264</b><br>
+<div class="footer">
+	<div class="footerHelp" style="width:1200px;margin:0 auto;">
+    	<div class="footerBox">
+        	<div class="footerCon">
+                <ul style="width:20%; float:left;">
+                    <li class="lititle">用户指南</li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-56.html" title="注册与信息完善">注册与信息完善</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-57.html" title="登录与修改密码">登录与修改密码</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-39.html" title="搜索指南">搜索指南</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-45.html" title="订购教程">订购教程</a></li>
+                </ul>
+								<ul style="width:20%; float:left;">
+                    <li class="lititle">分享平台</li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-47.html" title="分享操作指南">分享操作指南</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-51.html" title="负责人认证">负责人认证</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-41.html" title="材料转移协议">材料转移协议</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-52.html" title="材料邮寄与验证">材料邮寄与验证</a></li>
+                </ul>
+								<ul style="width:20%; float:left;">
+                    <li class="lititle">网站声明</li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-53.html" title="用户协议">用户协议</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-55.html" title="隐私声明">隐私声明</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-50.html" title="积分系统">积分系统</a></li>
+										<li class="short-li"><a target="_blank" href="http://jiyin.org/article-43.html" title="产品声明">产品声明</a></li>
+                </ul>
+								<ul style="width:25%; float:left;">
+                    <li class="lititle">联系我们</li>
+										<li class="short-li"><a rel="nofollow">详细地址：上海徐汇区均瑶国际广场641室</a></li>
+										<li class="short-li"><a rel="nofollow">客服邮箱：support@jiyin.org</a></li>
+										<li class="short-li"><a rel="nofollow">固定电话：4006-120-152</a></li>
+										<li class="short-li"><a rel="nofollow">合作热线：15271807035</a></li>
+                </ul>
+								<ul style="float:right;">
+									<li>
+											<img style="width:130px; " src="./添加质粒_files/jyw.jpg" alt="">
+									</li>
+								</ul>
+            </div>
+        </div>
+  </div>
+	
+		<div class="friend_link" style="width:1200px;margin:0 auto;">
+	          <div>
+	          <dl class="blogroll" style="text-align:left; border-left:none; border-right:none; background:none;overflow:hidden;">
+	              <dd>友情链接：
+	              <span>
+	                  	                  <a href="http://www.jiyin.org/" target="_blank">MHC测序</a>
+	                  	                  <a href="http://www.jiyin.org/" target="_blank">基因</a>
+	                  	                  <a href="http://www.jiyin.org/" target="_blank">肿瘤基因测序</a>
+	                  	                  <a href="http://www.jiyin.org/" target="_blank">新生抗原预测</a>
+	                  	                  <a href="http://www.jiyin.org/" target="_blank">基因检测</a>
+	                  	                  <a href="http://kangantu.com/" target="_blank">康安途海外就医</a>
+	                  	                  <a href="http://www.kangantu.com/" target="_blank">丙肝</a>
+	                  	                  <a href="http://www.kangantu.com/" target="_blank">吉三代</a>
+	                  	                  <a href="https://cart.kangantu.com/" target="_blank">CAR-T</a>
+	                  	              </span>
+								</dd>
+	          </dl>
+	      </div>
+	</div>
+		
+  <div class="foot_con" style="width:1200px;margin:0 auto;">
+        
+        <div class="text" style="height:1px ; width:1px; overflow:hidden;">
+        	        	                                                                                                                                                                                                <br>
+        </div>
+        <p style="color:#999;">Copyright 版权所有 © 2016-2017 上海善生实业有限公司   版权所有 |<a rel="nofollow" href="http://www.beian.miit.gov.cn/">沪ICP备15022986号-5</a>        Tel: 4006 120 152</p>
+        </div>
+  </div>
+
+  
+<link href="./添加质粒_files/qq.css" rel="stylesheet" type="text/css">
+<div class="QQbox" id="divQQbox" style="width: 170px; top: 124.5px;">
+<div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
+    <div class="t"></div>
+    <div class="infobox">我们营业的时间<br>9:00-18:00</div>
+    <div class="con">
+        <ul>
+                                                                                        <li>服务热线: <br>4006-120-152</li>
+        </ul>
+    </div>
+    <div class="b"></div>
+</div>
+<div id="divMenu" onmouseover="OnlineOver();" style="display: block; "><img src="./添加质粒_files/qq_1.gif" class="press" alt="在线咨询"></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var tips; var theTop = 120/*这是默认高度,越大越往下*/; var old = theTop;
+function initFloatTips() {
+tips = document.getElementById('divQQbox');
+moveTips();
+};
+function moveTips() {
+var tt=50;
+if (window.innerHeight) {
+pos = window.pageYOffset
+}
+else if (document.documentElement && document.documentElement.scrollTop) {
+pos = document.documentElement.scrollTop
+}
+else if (document.body) {
+pos = document.body.scrollTop;
+}
+pos=pos-tips.offsetTop+theTop;
+pos=tips.offsetTop+pos/10;
+if (pos < theTop) pos = theTop;
+if (pos != old) {
+tips.style.top = pos+"px";
+tt=10;
+//alert(tips.style.top);
+}
+old = pos;
+setTimeout(moveTips,tt);
+}
+//!]]>
+initFloatTips();
+function OnlineOver(){
+document.getElementById("divMenu").style.display = "none";
+document.getElementById("divOnline").style.display = "block";
+document.getElementById("divQQbox").style.width = "170px";
+}
+function OnlineOut(){
+document.getElementById("divMenu").style.display = "block";
+document.getElementById("divOnline").style.display = "none";
+}
+if(typeof(HTMLElement)!="undefined")    //给firefox定义contains()方法，ie下不起作用
+{
+      HTMLElement.prototype.contains=function(obj)
+      {
+          while(obj!=null&&typeof(obj.tagName)!="undefind"){ //通过循环对比来判断是不是obj的父元素
+   　　　　if(obj==this) return true;
+   　　　　obj=obj.parentNode;
+   　　}
+          return false;
+      };
+}
+function hideMsgBox(theEvent){ //theEvent用来传入事件，Firefox的方式
+　 if (theEvent){
+　 var browser=navigator.userAgent; //取得浏览器属性
+　 if (browser.indexOf("Firefox")>0){ //如果是Firefox
+　　 if (document.getElementById('divOnline').contains(theEvent.relatedTarget)) { //如果是子元素
+　　 return; //结束函式
+}
+}
+if (browser.indexOf("MSIE")>0){ //如果是IE
+if (document.getElementById('divOnline').contains(event.toElement)) { //如果是子元素
+return; //结束函式
+}
+}
+}
+/*要执行的操作*/
+document.getElementById("divMenu").style.display = "block";
+document.getElementById("divOnline").style.display = "none";
+}
+</script>
+
+<div id="tips1_contant" style="display:none;padding:20px;">
+  <p>空载体：不含有外源基因插入，可供使用者进行目的片段的插入操作。</p>
+  <p>编码一个插入基因：质粒中已经插入1段外源基因；使用者可以直接进行外源基因表达等操作，或者通过酶切等方法替换掉其中的外源基因片段。</p>
+  <p>编码多个插入基因：质粒中已经插入2段或以上的外源基因；使用者可以直接进行外源基因表达等操作，或者通过酶切等方法替换掉某些或者全部外源基因片段。</p>
+  <p>编码gRNA/shRNA：质粒中含有编码gRNA或者shRNA的相关序列。</p>
+</div>
+<div id="tips2_contant" style="display:none;padding:20px;">
+  <p>1.如果插入基因中的标签/融合蛋白是您添加的，那么请根据位置选择：插入基因-N端或插入基因-C端。</p>
+  <p>2.如果载体上已有相应的标签/融合蛋白，您只需要将基因克隆在质粒中，请根据位置选择：质粒骨架-N端或质粒骨架-C端。</p>
+  <p><img style="width:600px" src="./添加质粒_files/tips2.png"></p>
+</div>
+<div id="tips3_contant" style="display:none;padding:20px;">
+  <p>您在分享质粒材料时，应当明确分享材料的生物安全性。基因云网站不会接受任何具有生物危害性的质粒材料：包括但不限于在进行DNA纯化、原核或者真核细胞转化、表达产物纯化等实验流程中，
+    需要涉及高于生物安全等级BSL-1的环境下进行操作的质粒材料。</p>
+</div>
+<div class="layui-layer-move"></div></body></html>

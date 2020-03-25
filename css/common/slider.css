@@ -1,0 +1,158 @@
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #1974A1;
+}
+
+.js {
+    width: 90%;
+    margin: 10px auto 0 auto;
+}
+
+.js p {
+    padding: 5px 0;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.js p span {
+    float: right;
+}
+
+.js p span a {
+    color: #f00;
+    text-decoration: underline;
+}
+
+.js textarea {
+    height: 50px;
+    width: 98%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+}
+
+.qunar {
+    width: 100%;
+    margin: 0 auto 15px;
+    position: relative;
+    height: 428px;
+}
+
+.qunar .e_pic_wrap {
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.qunar .e_pic_wrap li {
+    position: relative;
+    display: inline;
+    overflow: hidden;
+}
+
+.qunar .e_bg_flt {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 420px;
+    height: 320px;
+    background: #000;
+    filter: alpha(opacity=50);
+    -moz-opacity: .5;
+    opacity: .5;
+    z-index: 0;
+}
+
+.qunar .e_flt_inf {
+    position: absolute;
+    right: 25px;
+    top: 40px;
+    width: 330px;
+    padding: 25px 28px 10px 15px;
+    overflow: hidden;
+    z-index: 20;
+    color: #fff;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.qunar .e_flt_inf h2 {
+    font: 25px "΢���ź�";
+}
+
+
+.qunar .e_flt_inf h3 a, .qunar .e_flt_inf h2 a {
+    color: #fff;
+}
+
+.qunar .e_flt_inf .t_info {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.qunar .e_flt_inf .t_info a {
+    color: #fff;
+}
+
+.qunar .e_sep {
+    color: #81d6d3;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 235px;
+    z-index: 20;
+}
+
+.qunar .e_sep a {
+    color: #81d6d3;
+}
+
+.qunar .prev, .qunar .next {
+    position: absolute;
+    z-index: 30;
+    display: block;
+}
+
+.qunar .prev {
+    top: 190px;
+    left: 30px;
+}
+
+.qunar .next {
+    top: 190px;
+    right: 30px;
+}
+
+.qunar .prev a, .qunar .next a {
+    display: block;
+    width: 25px;
+    height: 32px;
+    overflow: hidden;
+    background: url(../../img/ico_prevnext.png) no-repeat scroll 0 0;
+}
+
+.qunar .prev a {
+    background-position: 0 0;
+}
+
+.qunar .prev a:hover {
+    background-position: 0 -40px;
+}
+
+.qunar .next a {
+    background-position: 0 -80px;
+}
+
+.qunar .next a:hover {
+    background-position: 0 -120px;
+}

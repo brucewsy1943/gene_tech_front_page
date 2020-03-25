@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PI认证</title>
+		<link rel="stylesheet" href="../../css/common/c2dcefd770cc.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/4fb4e08dbf6b.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/slider.css">
+		<link rel="stylesheet" href="../../css/common/animate.min.css">
+		<link href="../../css/common/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+		<!-- <link rel="stylesheet" href="../../css/common/layer.css" id="layuicss-skinlayercss">
+		<link rel="stylesheet" href="../../css/common/layui.css" type="text/css"> -->
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/common/step.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/util/jump.css"/>
+		<script src="../../js/util/jump.js" type="text/javascript" charset="utf-8"></script>
+		<style media="screen">
+			.uc-nav .un-list li a {
+				height: 36px;
+				line-height: 36px;
+			}
+		
+			.uc-nav .un-list li a {
+				background-position: 40px -45px;
+			}
+		
+			.uc-nav .un-list li.cur a {
+				background-position: 40px -45px;
+				color: #0483c8;
+			}
+		
+			.uc-nav .un-list li a:hover {
+				background-position: 40px -45px;
+				color: #0483c8;
+				text-decoration: none;
+			}
+		
+			.login_tab {
+				height: 44px;
+				padding: 10px 30px;
+				text-align: center;
+				font-size: 16px;
+				background: #0084cb;
+				color: #fff;
+			}
+			#piInputs .col-sm-10{
+				padding-left:0 ;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="hd"></header>
+		<div class="block box">
+			<div id="ur_here">
+				<div class="block box">
+					<div id="ur_here">当前位置: <a href="../index/index.html">首页</a> PI认证</div>
+				</div>
+			</div>
+		</div>
+		<div id="" class="block clearfix" style="width:1200px;margin:0 auto;overflow:hidden;">
+			<div id="left-part" class="AreaL user_AreaL" style="width: 190px;float:left;"></div>
+			<div class="AreaR user_AreaR" style="width:990px;float:right;">
+				<div class="box">
+					<div class="box_1">
+						<div class="userCenterBox boxCenterList clearfix usBox  panel panel-default" style="_height:1%;">
+							<div class="am-u-md-9 am-u-lg-10 pi">
+								<h5 class="user_title">
+									<span><strong>实名认证</strong></span>
+									<a target="_blank" class="am-text-default" href="/help/articles/107033">
+										<span class="am-icon-question-circle"></span>
+									</a></h5>
+								<ul id="steps" class="nav nav-pills nav-justified step step-round" data-step="3">
+									<li class="active">
+										<a>申请pi认证</a>
+									</li>
+									<li class="">
+										<a>人工审核</a>
+									</li>
+									<li class="">
+										<a>审核结果</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div id="verifying" class="row" style="display: none;">
+							<div class="col-xs-12">
+								<p style="font-size:20px;text-align:center;height:46px;line-height:46px;border:1px solid #ddd;margin:20px 0 20px 0;border-radius:4px;color:#0483c8;">
+									正在审核中！
+								</p>
+							</div>
+						</div>
+						<div id="notPass" class="row" style="display: none;">
+							<div class="col-xs-12">
+								<p style="font-size:20px;text-align:center;height:46px;line-height:46px;border:1px solid #ddd;margin:20px 0 20px 0;border-radius:4px;color:#0483c8;">
+									您好！您的审核未能通过，请提供正确信息！
+								</p>
+							</div>
+						</div>
+						<div id="pass" class="row" style="display: none;">
+							<div class="col-xs-12">
+								<p style="font-size:20px;text-align:center;height:46px;line-height:46px;border:1px solid #ddd;margin:20px 0 20px 0;border-radius:4px;color:#0483c8;">
+									您好！您的认证已通过！
+								</p>
+							</div>
+						</div>
+						<form id="piContent" class="form-horizontal">
+							<div id="piInputs" class="row">
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">真实姓名：</label>
+									<div class="col-sm-10">
+										<input name="real_name" type="text" class="form-control" placeholder="真实姓名">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">所在机构：</label>
+									<div class="col-sm-10">
+										<input name="institute" type="text" class="form-control" placeholder="所在机构">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">移动电话：</label>
+									<div class="col-sm-10 ">
+										<input name="telephone" type="text" class="form-control" placeholder="移动电话">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">邮箱信息：</label>
+									<div class="col-sm-10">
+										<input name="email" type="text" class="form-control" placeholder="邮箱信息">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">机构地址：</label>
+									<div class="col-sm-10">
+										<input name="institute_address" type="text" class="form-control" placeholder="机构地址">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">PI 姓名：</label>
+									<div class="col-sm-10">
+										<input name="pi_name" type="text" class="form-control" placeholder="PI 姓名">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" style="text-align:center">PI 电话：</label>
+									<div class="col-sm-10">
+										<input name="pi_phone" type="text" class="form-control" placeholder="PI 电话">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-3 col-sm-offset-2">
+										<input id="piSubmit" type="button" class="form-control" value="提交申请">
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer" id="ft"></div>
+	</body>
+
+	<script type="text/javascript" src="../../js/common/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../js/common/jquery.json.js"></script>
+	<script src="../../js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/common/bootstrap.js"></script>
+	<script type="text/javascript" src="../../js/common/transport_jquery.js"></script>
+	<script type="text/javascript" src="../../js/common/utils.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript" src="../../js/common/global.js"></script>
+	<script type="text/javascript" src="../../js/common/compare.js"></script>
+	<!-- <script src="../../js/common/layer.js"></script>
+	<script src="../../js/common/layui.js"></script> -->
+	<script src="../../layui/layui.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/components/components.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/pi/pi.js" type="text/javascript" charset="utf-8"></script>
+</html>

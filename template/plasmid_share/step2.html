@@ -1,0 +1,567 @@
+<form method="POST" action="http://jiyin.org/user.php" class="form form-condensed form-horizontal" name="geneStep2"
+ onsubmit="return false" id="step2">
+	<input type="hidden" name="csrfmiddlewaretoken" value="vHIzPlxv1QvIrauzzY5kxHR8Ug1qMPpQ" class="form-control">
+	<input id="id_insert-TOTAL_FORMS" name="insert-TOTAL_FORMS" type="hidden" value="1" class="form-control"><input id="id_insert-INITIAL_FORMS"
+	 name="insert-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_insert-MIN_NUM_FORMS" name="insert-MIN_NUM_FORMS"
+	 type="hidden" value="0" class="form-control"><input id="id_insert-MAX_NUM_FORMS" name="insert-MAX_NUM_FORMS" type="hidden"
+	 value="1" class="form-control">
+	<section>
+		<h2>插入基因相关信息</h2>
+		<div class="panel panel-default">
+			<div class="panel-body insert_fieldset">
+				<div class="input">
+					<div id="div_gene" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_gene">
+								插入基因名称： </label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input class="entrezgene entrezgene_gene form-control" id="id_insert-0-gene" name="insert_0_gene" placeholder="示例：green fluorescent protein"
+							 type="text" value="">
+						</div>
+					</div>
+					<div id="div_genealt1" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_genealt1">
+								别名1：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input class="entrezgene entrezgene_gene form-control" id="id_insert-0-genealt1" name="insert_0_genealt1"
+							 placeholder="示例：GFP" type="text" value="">
+						</div>
+					</div>
+					<div id="div_genealt2" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_genealt2">
+								别名2：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input class="entrezgene entrezgene_gene form-control" id="id_insert-0-genealt2" name="insert_0_genealt2" type="text"
+							 value="">
+						</div>
+					</div>
+					<div id="div_genealt3" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_genealt3">
+								别名3：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input class="entrezgene entrezgene_gene form-control" id="id_insert-0-genealt3" name="insert_0_genealt3" type="text"
+							 value="">
+						</div>
+					</div>
+					<div id="div_insertsize" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_insertsize">
+								插入基因大小（bp）：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_insert-0-insertsize" name="insert_0_insertsize" placeholder="示例：741" type="number" class="form-control"
+							 value="">
+						</div>
+					</div>
+					<div id="div_species" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_species">
+								插入基因的物种来源（可复选）：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<table class="table table-no-border checkbox-table">
+								<tbody>
+									<tr>
+										<td>
+											<div class="checkbox"><label for="id_insert-0-species_0"><input class="entrezgene entrezgene_species" id="id_insert-0-species_0"
+													 name="insert_0_species" type="checkbox" value="131">
+													人(human)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_1"><input class="entrezgene entrezgene_species" id="id_insert_0_species_1"
+													 name="insert_0_species" type="checkbox" value="132">
+													小鼠(mouse)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_2"><input class="entrezgene entrezgene_species" id="id_insert_0_species_2"
+													 name="insert_0_species" type="checkbox" value="133">
+													大鼠(rat)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_3"><input class="entrezgene entrezgene_species" id="id_insert_0_species_3"
+													 name="insert_0_species" type="checkbox" value="134">
+													鸡(chicken)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_4"><input class="entrezgene entrezgene_species" id="id_insert_0_species_4"
+													 name="insert_0_species" type="checkbox" value="135">
+													牛(bovine)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_5"><input class="entrezgene entrezgene_species" id="id_insert_0_species_5"
+													 name="insert_0_species" type="checkbox" value="136">
+													蛙(frog)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_6"><input class="entrezgene entrezgene_species" id="id_insert_0_species_6"
+													 name="insert_0_species" type="checkbox" value="137">
+													斑马鱼(zebrafish)</label></div>
+										</td>
+										<td>
+											<div class="checkbox"><label for="id_insert_0_species_7"><input class="entrezgene entrezgene_species" id="id_insert_0_species_7"
+													 name="insert_0_species" type="checkbox" value="138">
+													果蝇(fly)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_8"><input class="entrezgene entrezgene_species" id="id_insert_0_species_8"
+													 name="insert_0_species" type="checkbox" value="139">
+													线虫(nematode)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_9"><input class="entrezgene entrezgene_species" id="id_insert_0_species_9"
+													 name="insert_0_species" type="checkbox" value="140">
+													芽殖酵母(budding yeast)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_10"><input class="entrezgene entrezgene_species" id="id_insert_0_species_10"
+													 name="insert_0_species" type="checkbox" value="141">裂殖酵母(fission yeast)</label>
+											</div>
+											<div class="checkbox"><label for="id_insert_0_species_11"><input class="entrezgene entrezgene_species" id="id_insert_0_species_11"
+													 name="insert_0_species" type="checkbox" value="142">拟南芥 (Arabidopsis)</label>
+											</div>
+											<div class="checkbox"><label for="id_insert_0_species_12"><input class="entrezgene entrezgene_species" id="id_insert_0_species_12"
+													 name="insert_0_species" type="checkbox" value="143">人工合成(Synthetic)</label></div>
+											<div class="checkbox"><label for="id_insert_0_species_13"><input class="entrezgene entrezgene_species" id="id_insert_0_species_13"
+													 name="insert_0_species" type="checkbox" value="144">其他</label></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="div_species_other" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_species_other">
+								<span>其他物种来源信息</span> ：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_insert_0_species_other" maxlength="128" name="insert_0_species_other" type="text" class="form-control"
+							 placeholder="如果勾选其他选项，请填写相应的物种信息" value="">
+						</div>
+					</div>
+					<div style="display: none;"><input id="id_insert_0_id" name="insert_0_id" type="hidden" class="form-control"></div>
+					<div style="display: none;"><input id="id_insert_0_plasmid" name="insert_0_plasmid" type="hidden" value="104128"
+						 class="form-control"></div>
+					<input id="id_insert_0_genbank-TOTAL_FORMS" name="insert_0_genbank-TOTAL_FORMS" type="hidden" value="2" class="form-control"><input
+					 id="id_insert_0_genbank-INITIAL_FORMS" name="insert_0_genbank-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_insert_0_genbank-MIN_NUM_FORMS" name="insert_0_genbank-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_insert_0_genbank-MAX_NUM_FORMS" name="insert_0_genbank-MAX_NUM_FORMS" type="hidden" value="2" class="form-control">
+					<div style="display: none;"><input id="id_insert_0_genbank_0_insert" name="insert_0_genbank_0_insert" type="hidden"
+						 class="form-control"></div>
+					<div id="div_genbank_id" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_genbank_id">
+								GenBank ID：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_insert_0_genbank_0_genbank_id" name="insert_0_genbank" placeholder="e.g. NM_001107058" type="text"
+							 class="form-control" value="">
+						</div>
+					</div>
+					<div style="display: none;"><input id="id_insert_0_genbank_0_id" name="insert_0_genbank_0_id" type="hidden" class="form-control"></div>
+					<div style="display: none;"><input id="id_insert_0_genbank-1-insert" name="insert_0_genbank-1-insert" type="hidden"
+						 class="form-control"></div>
+					<div id="div_genbank_id" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_genbank_id">
+								GenBank ID：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_insert_0_genbank-1-genbank_id" name="insert_0_genbank1" placeholder="e.g. NM_001107058" type="text"
+							 class="form-control" value="">
+						</div>
+					</div>
+					<div style="display: none;"><input id="id_insert_0_genbank-1-id" name="insert_0_genbank-1-id" type="hidden" class="form-control"></div>
+					<input id="id_insert_0_tag-TOTAL_FORMS" name="insert_0_tag-TOTAL_FORMS" type="hidden" value="5" class="form-control"><input
+					 id="id_insert_0_tag-INITIAL_FORMS" name="insert_0_tag-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_insert_0_tag-MIN_NUM_FORMS" name="insert_0_tag-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_insert_0_tag-MAX_NUM_FORMS" name="insert_0_tag-MAX_NUM_FORMS" type="hidden" value="5" class="form-control">
+					<div id="div_mutation" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_mutation">
+								插入基因突变、缺失信息：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<textarea id="id_insert_0_mutation" name="insert_0_mutation" class="form-control" placeholder="测序验证插入基因是否发生突变、缺失；如有，请填写相关突变信息，示例：第225碱基由G碱基突变为A碱基、第117位氨基酸由精氨酸突变为苯丙氨酸"></textarea>
+						</div>
+					</div>
+					<ul class="more-inputs list-unstyled" id="fusion-protein-0">
+						<li class="" style="margin-bottom: 20px; display: list-item;">
+							<ul class="input list-unstyled">
+								<li class="inline">
+									<div id="div_tag" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_tag">
+												融合蛋白/标签：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<input id="id_insert_0_tag-0" name="insert_0_tag-0" value="" type="text" class="form-control" placeholder="插入基因是否带有融合蛋白或标签，如有，请填写；示例：His标签、Flag标签">
+										</div>
+									</div>
+									<div id="div_location" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_location">
+												融合蛋白/标签的位置:
+												<a href="javascript:{};" data-toggle="modal" data-target="#tag-terminals" data-remote="false" data-backdrop="false"><span
+													 class="glyphicon glyphicon-question-sign tips2_contant" style="position: relative; top: 2px;"></span></a></label>
+										</div>
+										<div class="field-container col-xs-8" value="">
+											<select id="id_insert_0_location-0" name="insert_0_location-0" class="form-control">
+												<option value="0" selected="selected">---------</option>
+												<option value="1">插入基因-N端</option>
+												<option value="2">插入基因-C端</option>
+												<option value="3">质粒骨架-N端</option>
+												<option value="4">质粒骨架-C端</option>
+											</select>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<li><input class="hidden_i" type="hidden" value="0"><span id="add-other-protein" class="add-other-protein show-more btn  btn-primary btn-sm">添加另一条融合蛋白/标签信息</span></li>
+				</div>
+			</div>
+		</div>
+	</section>
+	<ul class="list-inline edit-plasmid-save-buttons" id="add-another">
+		<li>
+			<input name="plasmid_name" type="hidden" value="pEGFP">
+			<input name="share_id" type="hidden" value="1000004">
+			<input type="hidden" name="plasmid_type" value="700">
+			<input type="submit" name="next" class="spinner-after-post btn btn-success btn-sm" onclick="step2Next()" value="保存并进入下一步"
+			 id="save-continue-button">
+		</li>
+	</ul>
+	<script type="text/javascript">
+		$(function() {
+			$("#add-new-sequence").click(function() {
+				var i = ($("#step2>section").length) - 1;
+				layer.alert("你确定添加一条插入基因/序列信息嘛？", function(index) {
+					if ($("#step2>section").length < 5) {
+						i++;
+						var str = '<section>' +
+							'<div class="panel panel-default">' +
+							'<div class="panel-heading" id="insert-0">' +
+							'<div class="row row-vertically-centered">' +
+							'<div class="col-xs-8" style="word-break: break-word;">' +
+							'<strong>' +
+							'插入基因/序列信息：' +
+							'</strong>' +
+							'</div>' +
+							'<div class="col-xs-4 text-right" style="padding-right: 0;">' +
+							'</div>' +
+							'</div>' +
+							'</div>' +
+							'<div class="panel-body insert_fieldset">' +
+							'<div class="input">' +
+							'<div id="div_gene" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_gene">' +
+							'插入基因序列的名称：                                    </label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input class="entrezgene entrezgene_gene form-control" id="id_insert_' + i + '_gene" name="insert_' + i +
+							'_gene" placeholder="e.g. Mitogen-activated Protein Kinase" type="text" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_genealt1" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_genealt1">' +
+							'别名：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input class="entrezgene entrezgene_gene form-control" id="id_insert_' + i + '_genealt1" name="insert_' +
+							i + '_genealt1" placeholder="e.g. MAPK" type="text" value="">' +
+							'</div>              ' +
+							'</div>' +
+							'<div id="div_genealt2" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_genealt2">' +
+							'&nbsp;' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input class="entrezgene entrezgene_gene form-control" id="id_insert_' + i + '_genealt2" name="insert_' +
+							i + '_genealt2" type="text" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_genealt3" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_genealt3">' +
+							'&nbsp;' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input class="entrezgene entrezgene_gene form-control" id="id_insert_' + i + '_genealt3" name="insert_' +
+							i + '_genealt3" type="text" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_insertsize" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_insertsize">' +
+							'插入基因序列的片段大小：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_insertsize" name="insert_' + i +
+							'_insertsize" placeholder="e.g. 3200 " type="number" class="form-control" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_species" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_species">' +
+							'插入基因序列的物种来源(可以复选)：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<table class="table table-no-border checkbox-table">' +
+							'<tbody>' +
+							'<tr>' +
+							'<td>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_0"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_0" name="insert_' + i + '_species" type="checkbox" value="131">' +
+							'人(human)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_1"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_1" name="insert_' + i + '_species" type="checkbox" value="132">' +
+							'小鼠(mouse)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_2"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_2" name="insert_' + i + '_species" type="checkbox" value="133">' +
+							'大鼠(rat)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_3"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_3" name="insert_' + i + '_species" type="checkbox" value="134">' +
+							'鸡(chicken)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_4"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_4" name="insert_' + i + '_species" type="checkbox" value="135">' +
+							'牛(bovine)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_5"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_5" name="insert_' + i + '_species" type="checkbox" value="136">' +
+							'蛙(frog)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_6"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_6" name="insert_' + i + '_species" type="checkbox" value="137">' +
+							'斑马鱼(zebrafish)</label></div>' +
+							'</td>' +
+							'<td>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_7"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_7" name="insert_' + i + '_species" type="checkbox" value="138">' +
+							'果蝇(fly)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_8"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_8" name="insert_' + i + '_species" type="checkbox" value="139">' +
+							'线虫(nematode)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_9"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_9" name="insert_' + i + '_species" type="checkbox" value="140">' +
+							'芽殖酵母(budding yeast)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_10"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_10" name="insert_' + i + '_species" type="checkbox" value="141">裂殖酵母(fission yeast)</label>' +
+							'</div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_11"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_11" name="insert_' + i + '_species" type="checkbox" value="142">拟南芥 (Arabidopsis)</label>' +
+							'</div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_12"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_12" name="insert_' + i + '_species" type="checkbox" value="143">人工合成(Synthetic)</label></div>' +
+							'<div class="checkbox"><label for="id_insert_' + i +
+							'_species_13"><input class="entrezgene entrezgene_species" id="id_insert_' + i +
+							'_species_13" name="insert_' + i + '_species" type="checkbox" value="144">其他</label></div>' +
+							'</td>' +
+							'</tr>' +
+							'</tbody>' +
+							'</table>' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_species_other" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_species_other">' +
+							'<span>其他物种信息</span> ：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_species_other" maxlength="128" name="insert_' + i +
+							'_species_other" type="text" class="form-control" placeholder="如果勾选其他选项，请填写相应的物种信息" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_id" name="insert_' + i +
+							'_id" type="hidden" class="form-control"></div>' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_plasmid" name="insert_' + i +
+							'_plasmid" type="hidden" value="104128" class="form-control"></div>' +
+							'<input id="id_insert_' + i + '_genbank-TOTAL_FORMS" name="insert_' + i +
+							'_genbank-TOTAL_FORMS" type="hidden" value="2" class="form-control"><input id="id_insert_' + i +
+							'_genbank-INITIAL_FORMS" name="insert_' + i +
+							'_genbank-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_insert_' + i +
+							'_genbank-MIN_NUM_FORMS" name="insert_' + i +
+							'_genbank-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input id="id_insert_' + i +
+							'_genbank-MAX_NUM_FORMS" name="insert_' + i +
+							'_genbank-MAX_NUM_FORMS" type="hidden" value="2" class="form-control">' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_genbank_' + i + '_insert" name="insert_' + i +
+							'_genbank_' + i + '_insert" type="hidden" class="form-control"></div>' +
+							'<div id="div_genbank_id" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_genbank_id">' +
+							'GenBank ID：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_genbank_' + i + '_genbank_id" name="insert_' + i +
+							'_genbank" placeholder="e.g. NM_001107058" type="text" class="form-control" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_genbank_' + i + '_id" name="insert_' + i +
+							'_genbank" type="hidden" class="form-control"></div>' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_genbank-1-insert" name="insert_' + i +
+							'_genbank" type="hidden" class="form-control"></div>' +
+							'<div id="div_genbank_id" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_genbank_id">' +
+							'GenBank ID：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_genbank-1-genbank_id" name="insert_' + i +
+							'_genbank1" placeholder="e.g. NM_001107058" type="text" class="form-control" value="">' +
+							'</div>' +
+							'</div>' +
+							'<div style="display: none;"><input id="id_insert_' + i + '_genbank-1-id" name="insert_' + i +
+							'_genbank-1-id" type="hidden" class="form-control"></div>' +
+							'<input id="id_insert_' + i + '_tag-TOTAL_FORMS" name="insert_' + i +
+							'_tag-TOTAL_FORMS" type="hidden" value="5" class="form-control"><input id="id_insert_' + i +
+							'_tag-INITIAL_FORMS" name="insert_' + i +
+							'_tag-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_insert_' + i +
+							'_tag-MIN_NUM_FORMS" name="insert_' + i +
+							'_tag-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input id="id_insert_' + i +
+							'_tag-MAX_NUM_FORMS" name="insert_' + i +
+							'_tag-MAX_NUM_FORMS" type="hidden" value="5" class="form-control">' +
+							'<div id="div_mutation" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_mutation">' +
+							'插入基因/序列是否发生突变：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_mutation" name="insert_' + i +
+							'_mutation" value="" type="text" class="form-control" placeholder="如果发生突变请填写其他信息eg:changed Serine 112 to Alanine,or deleted amino acids 251-406">' +
+							'</div>' +
+							'</div>' +
+							'<ul class="more-inputs list-unstyled" id="fusion-protein-' + i + '">' +
+							'<li class="" style="margin-bottom: 20px; display: list-item;">' +
+							'<ul class="input list-unstyled">' +
+							'<li class="inline">' +
+							'<div id="div_tag" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_tag">' +
+							'插入基因/序列是否带有融合蛋白/标签：' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<input id="id_insert_' + i + '_tag-0" name="insert_' + i +
+							'_tag-0" value="" type="text" class="form-control" placeholder="如果带有请填写融合蛋白/标签名称">' +
+							'</div>' +
+							'</div>' +
+							'<div id="div_location" class="form-group deposit-field deposit-field-horizontal">' +
+							'<div class="label-container col-xs-4">' +
+							'<label class="control-label" for="id_location">' +
+							'融合蛋白/标签的位置:' +
+							'</label>' +
+							'</div>' +
+							'<div class="field-container col-xs-8">' +
+							'<select id="id_insert_' + i + '_location-0" name="insert_' + i + '_location-0" class="form-control">' +
+							'<option value="0">---------</option>' +
+							'<option value="1">插入基因-N端</option>' +
+							'<option value="2">插入基因-C端</option>' +
+							'<option value="3">质粒骨架-N端</option>' +
+							'<option value="4">质粒骨架-C端</option>' +
+							'</select>' +
+							'</div>' +
+							'</div>' +
+							'</li>' +
+							'</ul>' +
+							'</li>' +
+							'</ul>' +
+							'<li><input class="hidden_i" type="hidden" value=' + i +
+							'><span class="add-other-protein show-more btn  btn-primary btn-sm">添加另一条融合蛋白/标签信息</span></li>' +
+							'</div>' +
+							'</div>' +
+							'</div>' +
+							'</section>'
+						$("#add-another").before(str);
+					} else {
+						layer.alert("最多添加五条融合蛋白哦！")
+					}
+					layer.close(index);
+				})
+			});
+		});
+		$(document).on('click', '.add-other-protein', function(event) {
+			var k = ($(this).siblings().val())
+			var j = ($(this).parent().siblings(".more-inputs").children("li").length);
+			var msg1 = "";
+			var tagLen = $.trim($("#id_insert_" + k + "_tag-" + (j - 1) + "").val()).length;
+			var isTrue = $("#id_insert_" + k + "_location-" + (j - 1) + "").val();
+			console.log(tagLen);
+			console.log(isTrue);
+			if (tagLen == 0) {
+				msg1 += "插入基因/序列是否带有融合蛋白/标签不能为空" + "</br>"
+			}
+			if (isTrue == "0") {
+				msg1 += "请选择融合蛋白/标签的位置" + "</br>"
+			}
+			if (msg1.length > 0) {
+				layer.alert(msg1);
+			} else {
+				//console.log($(this).parent().siblings("#fusion-protein"));
+				if ($(this).parent().siblings(".more-inputs").children("li").length < 5) {
+					j++;
+					var str1 = '<li class="" style="margin-bottom: 20px; display: list-item;">' +
+						'<ul class="input list-unstyled">' +
+						'<li class="inline">' +
+						'<div id="div_tag" class="form-group deposit-field deposit-field-horizontal">' +
+						'<div class="label-container col-xs-4">' +
+						'<label class="control-label" for="id_tag">' +
+						'插入基因/序列是否带有融合蛋白/标签：' +
+						'</label>' +
+						'</div>' +
+						'<div class="field-container col-xs-8">' +
+						'<input id="id_insert_' + k + '_tag-' + (j - 1) + '" name="insert_' + k + '_tag-' + (j - 1) + '"' +
+						'value=""   type="text" class="form-control" placeholder="如果带有请填写融合蛋白/标签名称">' +
+						'</div>' +
+						'</div>' +
+						'<div id="div_location"' +
+						'class="form-group deposit-field deposit-field-horizontal">' +
+						'<div class="label-container col-xs-4">' +
+						'<label class="control-label" for="id_location">' +
+						'融合蛋白/标签的位置:' +
+						'</label>' +
+						'</div>' +
+						'<div class="field-container col-xs-8">' +
+						'<select id="id_insert_' + k + '_location-' + (j - 1) + '"' +
+						'name="insert_' + k + '_location-' + (j - 1) + '" class="form-control">' +
+						'<option value="0">---------</option>' +
+						'<option value="1">插入基因-N端</option>' +
+						'<option value="2">插入基因-C端</option>' +
+						'<option value="3">质粒骨架-N端</option>' +
+						'<option value="4">质粒骨架-C端</option>' +
+						'</select>' +
+						'</div>' +
+						'</div>' +
+						'</li>' +
+						'</ul>' +
+						'</li>';
+					$(this).parent().siblings(".more-inputs").append(str1);
+				} else {
+					layer.alert("最多添加五个序列哦！")
+				}
+			}
+		});
+	</script>
+</form>

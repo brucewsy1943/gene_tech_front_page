@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://jiyin.org/flow.php?step=checkout -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>结算中心</title>
+
+		<link rel="stylesheet" href="../../css/common/c2dcefd770cc.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/4fb4e08dbf6b.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/slider.css">
+		<link rel="stylesheet" href="../../css/common/animate.min.css">
+		<link href="../../css/common/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../../css/common/layer.css" id="layuicss-skinlayercss">
+		<link id="layuicss-layer" rel="stylesheet" href="../../css/common/layer(1).css" media="all">
+		<link rel="stylesheet" href="../../css/common/layui.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" type="text/css">
+		<link href="../..css/common/qq.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../css/util/jump.css"/>
+		<script src="../../js/util/jump.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<style>
+		#ie7-register-link {
+            display: none
+        }
+
+        html.lt-ie8 #register-link {
+            display: none;
+        }
+
+        html.lt-ie8 #ie7-register-link {
+            display: inline;
+        }
+        .homepage-section .col-xs-3{padding: 0 15px;}
+        .homepage-section .col-xs-3:first-child{padding-left: 0;}
+        .homepage-section .col-xs-3:last-child{padding-right: 0;}
+    </style>
+	<style>
+		.slideshow-cont {
+            background: linear-gradient(
+                    to bottom,
+                    #0081c6 0%,
+                    #00a2e4 0%,
+                    #00336f 92.4%,
+                    #d9ecf7 92.5%,
+                    #d9ecf7 100%
+            );
+            height: 347px;
+            min-width: 960px;
+            margin-bottom: 10px;
+        }
+    </style>
+	<body>
+
+		<header id="hd"></header>
+		<div class="block box">
+			<div id="ur_here">
+				<div class="block box">
+
+					<div id="ur_here">
+						当前位置: <a href="../index/index.html">首页</a> 结算中心</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+			<form action="#" method="post" name="theForm" id="theForm">
+				<h1><img src="../../img/public/shopping-cart-icon.png" alt=""> 结算中心</h1>
+				<hr>
+				<div class="flowBox order-detial">
+					<table id="cartInfoTable" class="table table-no-border table-hover quote-table order-detial-sure">
+
+					</table>
+					<table class="table table-no-border table-hover quote-table">
+						<tbody>
+							<tr>
+								<th style="width:147px;padding-top:12px;">收货人信息</th>
+								<td id="addresses" colspan="3">
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- <table class="table table-no-border table-hover quote-table">
+						<tbody id="paymentTable">
+							<tr>
+								<th style="width:147px">支付方式</th>
+								<td>
+
+									<div>
+										<input type="radio" name="payment" value="0" iscod="0" onclick="selectPayment(this)">
+										<strong>支付宝</strong>
+										<font style="font-weight:normal;color:#d43f3a;">￥0.00元</font>
+									</div>
+
+									<div>
+										<input type="radio" name="payment" value="1" iscod="0" onclick="selectPayment(this)">
+										<strong>微信支付</strong>
+										<font style="font-weight:normal;color:#d43f3a;">￥0.00元</font>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table> -->
+
+					<table class="table table-no-border table-hover quote-table">
+						<tbody>
+							<tr>
+								<th style="width:147px">发票信息</th>
+								<td>
+									<div style="margin-bottom:12px;">
+										是否开具发票：
+										<input name="need_inv" id="isInvoiceNeeded" type="checkbox" class="input" value="1" checked="">
+										<br>
+										<div id="Taxpayer" style="display:block;">
+											发票抬头：
+											<input name="title" type="text" class="input" id="title" size="20" value="" >
+											纳税人识别号：
+											<input name="taxpayer_number" type="text" class="input" id="taxpayer_number" size="20" value="">
+											<!-- 发票内容：
+											<select name="content" id="ECS_INVCONTENT" style="border:1px solid #ccc;">
+												<option value="明细">明细</option>
+												<option value="办公用品">办公用品</option>
+											</select> -->
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-no-border table-hover quote-table">
+						<tbody id="paymentTable1">
+							<tr>
+								<th style="width:147px;padding-top:12px;">其他信息</th>
+								<td colspan="4">
+									<!-- <div style="margin-bottom:12px;">
+										使用积分：
+										<input name="integral" type="text" class="input" style="width:150px;display:inline-block;" id="ECS_INTEGRAL"
+										 onblur="changeIntegral(this.value)" value="0" size="10">
+										您当前的可用积分为：
+										<font style="font-weight:normal;color:#d43f3a;">20</font>积分，
+										本订单最多可以使用100 积分.
+										<span id="ECS_INTEGRAL_NOTICE" class="notice"></span>
+									</div> -->
+									<div style="margin-bottom:12px;">
+										订单附言:
+										<div class="layui-form-item layui-form-text">
+											<div class="layui-input-block" style="margin-left:0;">
+												<textarea name="postscript" id="postscript" placeholder="请输入订单留言或者备注" class="layui-textarea"></textarea>
+											</div>
+										</div>
+									</div>
+
+								</td>
+								<td></td>
+							</tr>
+
+						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<td></td>
+								<td colspan="3">
+									<div id="ECS_ORDERTOTAL">
+										<div style="display:none;">
+											该订单完成后，您将获得 <font class="f4_b">100</font> 积分 </div>
+
+										<div>
+											费用总计: <font class="f4_b" id="totalFee"></font>
+
+										</div>
+
+										<!-- <div>
+											应付款金额: <font class="f4_b" id="shouldPay"></font>
+										</div> -->
+									</div>
+								</td>
+
+								<td style="width:188px;text-align:right;">
+									<!-- <button class="btn btn-success" onclick="addOrder()">提交订单</button> -->
+									<input type="button" style="width: 100px;" onclick="addOrder()" value="提交订单" />
+									<input type="hidden" name="consignee_post" value="1">
+									<input type="hidden" name="step" value="done">
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</form>
+
+		</div>
+
+		<!-- <div class="block">
+			<div class="box">
+				<div class="helpTitBg clearfix">
+					<a href="http://www.ecmoban.com/" class="ecmoban">ecshop模板堂</a>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="footer" id="ft"></div>
+		<input type="hidden" id="refreshed" value="no"> 
+		<!-- 模态框 -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">新增地址</h4>
+					</div>
+					<div class="modal-body">
+						<form id="addressForm">
+							<div class="form-group">
+								<label class="control-label">收货人:</label>
+								<input type="text" name="name" class="form-control" id="receiveName">
+							</div>
+							<div class="form-group">
+								<label for="address" class="control-label">地址:</label>
+								<textarea name="detail_address" class="form-control" id="detail_address"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="phone" class="control-label">电话:</label>
+								<input name="phone" class="form-control" id="phone"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button id="modal_submit" type="button" class="btn btn-primary">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../js/common/jquery-1.11.3.min.js"></script>
+		<script src="../../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script type="text/javascript" src="../../js/common/suggest.js"></script> -->
+		<script type="text/javascript" src="../../js/common/jquery.json.js"></script>
+		<script type="text/javascript" src="../../js/common/bootstrap.js"></script>
+		<script type="text/javascript" src="../../js/common/transport_jquery.js"></script>
+		<script src="../../js/common/layer.js"></script>
+		<script src="../../js/common/layui.js"></script>
+		<script src="../../js/common/cookie.js"></script>
+		<script src="../../js/components/components.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/pay/balance_center.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			if(window.name != "noReload"){
+				window.name = "noReload";
+				location.reload();
+			} else {
+				window.name = "";
+			}
+		</script>
+	</body>
+</html>

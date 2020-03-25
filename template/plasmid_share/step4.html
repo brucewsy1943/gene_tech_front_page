@@ -1,0 +1,316 @@
+<form class="form form-condensed form-horizontal" name="geneStep4" method="POST" action="http://jiyin.org/user.php"
+ onsubmit="return false">
+	<input type="hidden" name="csrfmiddlewaretoken" value="pYZlk2aPauP6VhrUhH12ZCIqgQBZa4ej" class="form-control">
+	<h2>质粒扩增、筛选相关信息</h2>
+	<div class="panel panel-default">
+		<div class="panel-body input">
+			<input id="id_growth-TOTAL_FORMS" name="growth-TOTAL_FORMS" type="hidden" value="1" class="form-control"><input id="id_growth-INITIAL_FORMS"
+			 name="growth-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_growth-MIN_NUM_FORMS" name="growth-MIN_NUM_FORMS"
+			 type="hidden" value="0" class="form-control"><input id="id_growth-MAX_NUM_FORMS" name="growth-MAX_NUM_FORMS" type="hidden"
+			 value="1" class="form-control">
+			<div id="div_bacterial_resistance" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container label-special col-xs-4">
+					<label class="control-label" for="id_bacterial_resistance">
+						原核抗性（可复选）：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<table class="table table-no-border checkbox-table">
+						<tbody>
+							<tr>
+								<td>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance1">
+											<input id="id_growth-0-bacterial_resistance1" name="growth-0-bacterial_resistance" type="checkbox" value="171">氨苄青霉素（Ampicillin）
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance2">
+											<input id="id_growth-0-bacterial_resistance2" name="growth-0-bacterial_resistance" type="checkbox" value="172">卡那霉素（Kanamycin）
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance3">
+											<input id="id_growth-0-bacterial_resistance3" name="growth-0-bacterial_resistance" type="checkbox" value="173">氯霉素（Chloramphenicol)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance4">
+											<input id="id_growth-0-bacterial_resistance4" name="growth-0-bacterial_resistance" type="checkbox" value="174">壮观霉素
+											(Spectinomycin)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance5">
+											<input id="id_growth-0-bacterial_resistance5" name="growth-0-bacterial_resistance" type="checkbox" value="175">四环素（Tetracycline）
+										</label>
+									</div>
+
+								</td>
+								<td>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance6">
+											<input id="id_growth-0-bacterial_resistance6" name="growth-0-bacterial_resistance" type="checkbox" value="176">潮霉素（Hygromycin）
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance7">
+											<input id="id_growth-0-bacterial_resistance7" name="growth-0-bacterial_resistance" type="checkbox" value="177">博来霉素（Bleomycin/Zeocin)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance8">
+											<input id="id_growth-0-bacterial_resistance8" name="growth-0-bacterial_resistance" type="checkbox" value="178">
+											庆大霉素(Gentamycin)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance9">
+											<input id="id_growth-0-bacterial_resistance9" name="growth-0-bacterial_resistance" type="checkbox" value="179">
+											链霉素（Streptomycin）
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="id_growth-0-bacterial_resistance">
+											<input id="id_growth-0-bacterial_resistance" name="growth-0-bacterial_resistance" type="checkbox" value="180">
+											其他
+										</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="div_bacterial_resistance_other" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container label-special col-xs-4">
+					<label class="control-label" for="id_bacterial_resistance_other">
+						原核抗性信息：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<input id="id_growth-0-bacterial_resistance_other" value="" name="growth-0-bacterial_resistance_other" placeholder="如果勾选其他选项，请填写相应的原核抗性信息"
+					 type="text" class="form-control">
+				</div>
+			</div>
+			<div id="div_plasmid_copy" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container col-xs-4">
+					<label class="control-label" for="id_plasmid_copy">
+						质粒的拷贝数情况：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<select id="id_growth-0-plasmid_copy" name="growth-0-plasmid_copy" class="form-control">
+						<option value="" selected="selected">--------</option>
+						<option value="未知">未知</option>
+						<option value="高拷贝数">高拷贝数</option>
+						<option value="低拷贝数">低拷贝数</option>
+					</select>
+				</div>
+			</div>
+			<div id="div_growth_strain" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container label-special col-xs-4">
+					<label class="control-label" for="id_growth_strain">
+						克隆菌株（适用此质粒的克隆菌株）：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<select id="id_growth-0-growth_strain" name="growth-0-growth_strain" class="form-control" onchange="seectOther(this,&#39;#div_growth_strain_other&#39;,&#39;11&#39;)">
+						<option value="" selected="selected">---------</option>
+						<option value="1">DH5α等常规感受态细胞</option>
+						<option value="17">stbl2，stbl3等能有效抑制错误重组的感受态细胞</option>
+						<option value="7">DB3.1，ccdB Survival等适用于转化携带ccdB基因质粒的感受态细胞</option>
+						<option value="10">Pir1 等适用于克隆复制起点为R6Kγ的感受态细胞</option>
+						<option value="11">其他</option>
+					</select>
+				</div>
+			</div>
+			<div id="div_growth_strain_other" class="form-group deposit-field deposit-field-horizontal" style="display:none;">
+				<div class="label-container col-xs-4">
+					<label class="control-label" for="id_growth_strain_other">
+						克隆菌株信息：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<input id="id_growth-0-growth_strain_other" name="growth-0-growth_strain_other" type="text" class="form-control"
+					 value="" placeholder="如果选择其他，请填写相应的克隆菌株信息">
+				</div>
+			</div>
+			<div id="div_growth_temp" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container col-xs-4">
+					<label class="control-label" for="id_growth_temp">
+						培养温度：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<select id="id_growth-0-growth_temp" name="growth-0-growth_temp" class="form-control" onchange="seectOther(this,&#39;#div_temperature_other&#39;,&#39;23&#39;)">
+						<option value="" selected="selected">---------</option>
+						<option value="37">37°C</option>
+						<option value="30">30°C</option>
+						<option value="23">其他</option>
+					</select>
+				</div>
+			</div>
+			<div id="div_temperature_other" class="form-group deposit-field deposit-field-horizontal" style="display:none;">
+				<div class="label-container  col-xs-4">
+					<label class="control-label" for="id_temperature_other">
+						培养温度信息：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<input id="id_growth-0-temperature_other" maxlength="128" value="" name="growth-0-temperature_other" type="text"
+					 placeholder="如果选择其他，请填写相应的培养温度信息" class="form-control">
+				</div>
+			</div>
+			<div id="div_growth_notes" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container col-xs-4">
+					<label class="control-label" for="id_growth_notes">
+						培养环境：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<textarea cols="40" id="id_growth-0-growth_notes" name="growth-0-growth_notes" rows="10" class="form-control"
+					 placeholder="示例：有氧，LB培养基"></textarea>
+				</div>
+			</div>
+			<div id="div_resistance_marker" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container col-xs-4">
+					<label class="control-label" for="id_resistance_marker">
+						筛选标记（可复选）：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<table class="table table-no-border checkbox-table">
+						<tbody>
+							<tr>
+								<td>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_0"><input id="id_growth-0-resistance_marker_0"
+											 name="growth-0-resistance_marker" type="checkbox" value="151">新霉素/G418（Neomycin with G418）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_1"><input id="id_growth-0-resistance_marker_1"
+											 name="growth-0-resistance_marker" type="checkbox" value="152">嘌呤霉素（Puromycin）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_2"><input id="id_growth-0-resistance_marker_2"
+											 name="growth-0-resistance_marker" type="checkbox" value="153">潮霉素（Hygromycin）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_3"><input id="id_growth-0-resistance_marker_3"
+											 name="growth-0-resistance_marker" type="checkbox" value="154">博来霉素（Zeocin）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_4"><input id="id_growth-0-resistance_marker_4"
+											 name="growth-0-resistance_marker" type="checkbox" value="155">杀稻瘟菌素（Blasticidin）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_5"><input id="id_growth-0-resistance_marker_5"
+											 name="growth-0-resistance_marker" type="checkbox" value="156">庆大霉素（Gentamicin）</label></div>
+								</td>
+								<td>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_6"><input id="id_growth-0-resistance_marker_6"
+											 name="growth-0-resistance_marker" type="checkbox" value="157">TRP1（营养缺陷型标记)</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_7"><input id="id_growth-0-resistance_marker_7"
+											 name="growth-0-resistance_marker" type="checkbox" value="158">LEU2（营养缺陷型标记）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_8"><input id="id_growth-0-resistance_marker_8"
+											 name="growth-0-resistance_marker" type="checkbox" value="159">URA3（营养缺陷型标记）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_9"><input id="id_growth-0-resistance_marker_9"
+											 name="growth-0-resistance_marker" type="checkbox" value="160">HIS3（营养缺陷型标记）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_10"><input id="id_growth-0-resistance_marker_10"
+											 name="growth-0-resistance_marker" type="checkbox" value="161">草丁膦（Basta）</label></div>
+									<div class="checkbox"><label for="id_growth-0-resistance_marker_11"><input id="id_growth-0-resistance_marker_11"
+											 name="growth-0-resistance_marker" type="checkbox" value="162">其他</label></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="div_resistance_marker_other" class="form-group deposit-field deposit-field-horizontal">
+				<div class="label-container label-special col-xs-4">
+					<label class="control-label" for="id_resistance_marker_other">
+						筛选标记信息：
+					</label>
+				</div>
+				<div class="field-container col-xs-8">
+					<input id="id_growth-0-resistance_marker_other" maxlength="128" value="" name="growth-0-resistance_marker_other"
+					 placeholder="如果勾选其他选项，请填写相应的筛选标记信息" type="text" class="form-control">
+				</div>
+			</div>
+			<section id="growth">
+				<div id="div_is_hazard" class="form-group deposit-field deposit-field-horizontal">
+					<div class="label-container label-special col-xs-4">
+						<label class="control-label" for="id_is_hazard">
+							此质粒操作过程是否具有生物风险：
+							<a href="javascript:{};" data-toggle="modal" data-target="#hazard-info" data-remote="false" data-backdrop="false"><span
+								 class="glyphicon glyphicon-question-sign tips3_contant" style="position: relative; top: 2px;"></span></a></label>
+					</div>
+					<div class="field-container col-xs-8" style="height:66px;">
+						<select id="id_growth-0-is_hazard" name="growth-0-is_hazard" class="form-control">
+							<option value="" selected="selected">---------</option>
+							<option value="False">否（不具有生物风险）</option>
+							<option value="True">有（具有生物风险）</option>
+						</select>
+					</div>
+				</div>
+				<div id="div_require_license" class="form-group deposit-field deposit-field-horizontal">
+					<div class="label-container label-special col-xs-4">
+						<label class="control-label" label-special="" for="id_require_license">
+							是否有条框限制此质粒的分发：
+						</label>
+					</div>
+					<div class="field-container col-xs-8" style="height:60px;">
+						<select id="id_growth-0-require_license" name="growth-0-require_license" class="form-control" onchange="seectOther(this,&#39;#div_license_notes&#39;,&#39;True&#39;)">
+							<option value="" selected="selected">---------</option>
+							<option value="False">否</option>
+							<option value="True">是</option>
+						</select>
+					</div>
+				</div>
+				<div id="div_license_notes" class="form-group deposit-field deposit-field-horizontal" style="display:block;">
+					<div class="label-container col-xs-4">
+						<label class="control-label" for="id_license_notes">
+							请填写限制性条框内容：
+						</label>
+					</div>
+					<div class="field-container col-xs-8">
+						<textarea cols="40" id="id_growth-0-license_notes" name="growth-0-license_notes" rows="10" class="form-control"></textarea>
+					</div>
+				</div>
+				<div id="div_origin" class="form-group deposit-field deposit-field-horizontal">
+					<div class="label-container label-special col-xs-4">
+						<label class="control-label" for="id_origin">
+							此质粒是否有元件涉及他人知识产权：
+						</label>
+					</div>
+					<div class="field-container col-xs-8" style="height:60px;">
+						<select id="id_growth-0-origin" name="growth-0-origin" class="form-control" onchange="seectOther(this,&#39;#div_origin_notes&#39;,&#39;True&#39;)">
+							<option value="" selected="selected">---------</option>
+							<option value="False">否</option>
+							<option value="True">是</option>
+						</select>
+					</div>
+				</div>
+				<div id="div_origin_notes" class="form-group deposit-field deposit-field-horizontal" style="display:none;">
+					<div class="label-container col-xs-4">
+						<label class="control-label" for="id_origin_notes">填写涉及他人知识产权的基因元件信息：</label>
+					</div>
+					<div class="field-container col-xs-8">
+						<textarea cols="40" id="id_growth-0-origin_notes" name="growth-0-origin_notes" rows="10" class="form-control"></textarea>
+					</div>
+				</div>
+				<div id="div_comments" class="form-group deposit-field deposit-field-horizontal">
+					<div class="label-container col-xs-4">
+						<label class="control-label" for="id_comments">
+							备注：
+						</label>
+					</div>
+					<div class="field-container col-xs-8">
+						<textarea cols="40" id="id_growth-0-comments" name="growth-0-comments" rows="10" class="form-control" placeholder="您可以填写其它有关此材料的备注信息，以便其他用户可以更好的了解您分享的材料信息"></textarea>
+					</div>
+				</div>
+				<div style="display: none;"><input id="id_growth-0-plasmid" name="growth-0-plasmid" type="hidden" value="103795"
+					 class="form-control"></div>
+			</section>
+		</div>
+	</div>
+	<ul class="list-inline edit-plasmid-save-buttons">
+		<li>
+			<input name="plasmid_name" type="hidden" value="pEGFP">
+			<input name="share_id" type="hidden" value="1000004">
+			<input type="hidden" name="plasmid_type" value="700">
+			<input type="submit" name="next" class="spinner-after-post btn btn-success btn-sm" value="保存并进行下一步" id="save-continue-button"
+			 onclick="step4Next()">
+		</li>
+	</ul>
+</form>

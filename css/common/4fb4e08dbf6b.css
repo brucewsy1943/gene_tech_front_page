@@ -1,0 +1,22 @@
+.homepage-section-view_all_link {
+	float: right
+}
+
+h2 .homepage-section-view_all_link {
+	font-size: 13px;
+	text-transform: none
+}
+
+.homepage-section-icon {
+	display: inline-block
+}
+
+.homepage-section h2 {
+	font-size: 19px;
+	margin-top: 2px
+}
+
+.homepage-section h3 {
+	font-size: 17px;
+	margin-top: 2px
+}

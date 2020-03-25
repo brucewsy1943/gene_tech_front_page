@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://jiyin.org/search.php -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>快速检索</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<link rel="stylesheet" href="../../css/common/c2dcefd770cc.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/4fb4e08dbf6b.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/slider.css">
+		<link rel="stylesheet" href="../../css/common/animate.min.css">
+		<link href="../../css/common/qq.css" rel="stylesheet" type="text/css">
+		<link href="../../css/common/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+		<!-- <link rel="stylesheet" href="../../css/common/layui.css" type="text/css"> -->
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../css/common/laypage.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/util/jump.css"/>
+		<script src="../../js/util/jump.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		#ie7-register-link {
+            display: none
+        }
+
+        html.lt-ie8 #register-link {
+            display: none;
+        }
+
+        html.lt-ie8 #ie7-register-link {
+            display: inline;
+        }
+        .homepage-section .col-xs-3{padding: 0 15px;}
+        .homepage-section .col-xs-3:first-child{padding-left: 0;}
+        .homepage-section .col-xs-3:last-child{padding-right: 0;}
+    </style>
+	<style>
+		.slideshow-cont {
+            background: linear-gradient(
+                    to bottom,
+                    #0081c6 0%,
+                    #00a2e4 0%,
+                    #00336f 92.4%,
+                    #d9ecf7 92.5%,
+                    #d9ecf7 100%
+            );
+            height: 347px;
+            min-width: 960px;
+            margin-bottom: 10px;
+        }
+    </style>
+	<style>
+		#ur_here {
+	    width: 1200px;
+	    margin: 20px auto;
+	
+	}
+	.jiyin-search-img{
+	  position: relative;
+	  overflow: hidden;
+	}
+	.jiyin-search-img  h1,.jiyin-search-img  p{
+	  color: #fff;
+	}
+	.search-position{
+	  position: absolute;
+	  top: 20%;
+	  width: 50%;
+	  margin: 0 auto;
+	  display: block;
+	  left: 25%;
+	  background: #333333bf;
+	}
+	.pages{
+	    text-align: center;
+	    padding-top: 10px;
+	}
+	.AreaCenter{
+		width: 940px;
+		float: right;
+		height: auto;
+	}
+	</style>
+	<body>
+		<header id="hd"></header>
+		<div class="jiyin-search-img">
+			<img src="../../img/jiyin_search.png" alt="">
+			<!-- <div class="search-position">
+				<h1 class="am-text-4xl am-padding am-text-center">基因云，带你走向云端，搜你想搜</h1>
+				<p class="am-text-center">
+					基因云是一座蕴含丰富生命科学宝藏的神秘山峰。其中奥秘无穷且不断拓展，让我们一起，携手探索，一同登攀！
+				</p>
+			</div> -->
+		</div>
+		<div class="block box">
+
+			<div id="ur_here">
+				当前位置: <a href="../index/index.html">首页</a> 质粒搜索</div>
+		</div>
+		<div class="block clearfix" id="jiyin-search-content">
+
+			<div class="AreaL" id="search-filters">
+				<fieldset>
+					<fieldset id="expression-filter-section" class="panel panel-default addgene-filter-panel">
+					</fieldset>
+				</fieldset>
+			</div>
+
+			<div class="AreaCenter">
+				<!-- <form class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="inputEmail">Email</label>
+						<div class="controls">
+							<input type="text" id="inputEmail" placeholder="Email">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputPassword">Password</label>
+						<div class="controls">
+							<input type="password" id="inputPassword" placeholder="Password">
+						</div>
+					</div>
+				</form> -->
+				<!-- <div class="row" style="margin: 0;">
+					<div class="col-xs-12 input-group">
+						<h3>详细搜索</h3>
+					</div>
+					<div class="col-xs-7 input-group">
+						<span class="input-group-addon" id="basic-addon1">GTP 编号：</span>
+						<input type="text" class="form-control" placeholder="GTP" aria-describedby="basic-addon1">
+					</div>
+					<div class="col-xs-7 input-group">
+						<span class="input-group-addon" id="basic-addon1">GTP 编号：</span>
+						<input type="text" class="form-control" placeholder="GTP" aria-describedby="basic-addon1">
+					</div>
+				</div> -->
+				<!-- <form>
+					<div class="form-group row">
+						<div class="col-xs-1">
+							<label for="exampleInputEmail1">基因</label>
+						</div>
+						<div class="col-xs-6">
+							<input type="email" class="form-control col-xs-6" id="exampleInputEmail1" placeholder="Email">
+						</div>
+						
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+				</form> -->
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-12 control-label" style="text-align:left">详细搜索</label>
+					</div>
+					<div class="form-group">
+						<!-- <label class="col-sm-2 control-label" style="text-align:left">GTP编号：</label> -->
+						<div class="col-sm-2">
+							<select id="firstSelector" class="form-control">
+								<option value="fuzzy_search">模糊查询</option>
+								<option value="plasmid_name">质粒名称</option>
+								<option value="plasmid_identification">质粒编号</option>
+								<option value="plasmid_type">质粒类型</option>
+								<option value="gene_name">基因/插入</option>
+								<option value="gene_species">基因种属</option>
+								<option value="gene_mutation">基因突变</option>
+								<option value="gene_identification">基因ID</option>
+								<option value="gene_alias">基因别名</option>
+								<option value="gene_tag">标签/融合蛋白</option>
+								<option value="vector_backbone">载体骨架</option>
+								<option value="plasmid_description">用途</option>
+								<option value="growth_bacterial_resistance">抗性</option>
+								<option value="growth_strain">克隆菌株</option>
+								<option value="growth_selection_mark">筛选标记</option>
+								<option value="lab_name">保藏实验室</option>
+								<option value="source_article">文章</option>
+							</select>
+						</div>
+						<div class="col-sm-6">
+							<input id="firstInput" type="text" class="form-control"  placeholder="">
+						</div>
+						<div class="col-sm-2">
+							<input onclick="advancedSearch()" type="button" class="form-control"  placeholder="" value="搜索">
+						</div>
+					</div>
+					<!-- <div class="form-group">
+						<div id="secondSelector" class="col-sm-4">
+							<select class="form-control">
+								<option value="plasmid_name">质粒名称</option>
+								<option value="plasmid_identification">质粒编号</option>
+								<option value="gene_name">基因/插入</option>
+								<option value="gene_species">基因种属</option>
+								<option value="gene_mutation">基因突变</option>
+								<option value="gene_identification">基因ID</option>
+								<option value="gene_alias">基因别名</option>
+								<option value="gene_tag">标签/融合蛋白</option>
+								<option value="plasmid_type">质粒类型</option>
+								<option value="vector_backbone">载体骨架</option>
+								<option value="plasmid_description">用途</option>
+								<option value="growth_bacterial_resistance">抗性</option>
+								<option value="growth_strain">克隆菌株</option>
+								<option value="growth_selection_mark">筛选标记</option>
+								<option value="lab_name">保藏实验室</option>
+								<option value="source_article">文章</option>
+							</select>
+						</div>
+						<div class="col-sm-4 ">
+							<input id="secondInput" type="text" class="form-control"  placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-4">
+							<select id="thirdSelector" class="form-control">
+								<option value="plasmid_name">质粒名称</option>
+								<option value="plasmid_identification">质粒编号</option>
+								<option value="gene_name">基因/插入</option>
+								<option value="gene_species">基因种属</option>
+								<option value="gene_mutation">基因突变</option>
+								<option value="gene_identification">基因ID</option>
+								<option value="gene_alias">基因别名</option>
+								<option value="gene_tag">标签/融合蛋白</option>
+								<option value="plasmid_type">质粒类型</option>
+								<option value="vector_backbone">载体骨架</option>
+								<option value="plasmid_description">用途</option>
+								<option value="growth_bacterial_resistance">抗性</option>
+								<option value="growth_strain">克隆菌株</option>
+								<option value="growth_selection_mark">筛选标记</option>
+								<option value="lab_name">保藏实验室</option>
+								<option value="source_article">文章</option>
+							</select>
+						</div>
+						<div class="col-sm-4 ">
+							<input id="thirdInput" type="text" class="form-control"  placeholder="">
+						</div>
+					</div> -->
+					<!-- <div class="form-group">
+						<div class="col-sm-4">
+							<input type="text" class="form-control"  placeholder="质粒搜索" value="">
+						</div>
+						<div class="col-sm-4">
+							<input onclick="search(1,10)" type="button" class="form-control"  placeholder="" value="搜索">
+						</div>
+					</div> -->
+				</form>
+			</div>
+
+			<div class="AreaR">
+				<div class="box">
+					<div class="box_1" id="jiyin-search-list">
+						<div class="search-contant-title">
+							搜索结果 <small class="pull-right" style="color:#fff;font-size:14px;font-weight:400;margin-right:10px;">总计 <b id="totalRecords"></b>
+								个记录</small>
+						</div>
+						<form action="http://jiyin.org/compare.php" method="post" name="compareForm" id="compareForm" onsubmit="return compareGoods(this);">
+							<div id="goods" class="goodsList"></div>
+						</form>
+
+					</div>
+				</div>
+				<div class="blank"></div>
+
+				<div class="pages">
+					<div id="pages"></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer" id="ft"></div>
+
+	</body>
+	<script type="text/javascript" src="../../js/common/jquery-1.11.3.min.js"></script>
+	<script src="../../layui/layui.all.js" type="text/javascript"></script>
+	<script src="../../js/base.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script type="text/javascript" src="../../js/common/suggest.js"></script> -->
+	<script type="text/javascript" src="../../js/common/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/common/bootstrap.js"></script>
+	<script type="text/javascript" src="../../js/common/transport_jquery.js"></script>
+	<script src="../../js/components/components.js" type="text/javascript" charset="utf-8"></script>
+<!-- 	<script src="../../js/common/layui.all.js"></script> -->
+	<script src="../../js/laypage/laypage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/plasmid/plasmid_list.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common_methods.js" type="text/javascript" charset="utf-8"></script>
+</html>

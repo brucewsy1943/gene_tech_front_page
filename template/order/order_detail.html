@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://jiyin.org/user.php?act=order_list -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>订单详情</title>
+		<link rel="stylesheet" href="../../css/common/c2dcefd770cc.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/4fb4e08dbf6b.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/slider.css">
+		<link rel="stylesheet" href="../../css/common/animate.min.css">
+		<link href="../../css/common/style.css" rel="stylesheet" type="text/css">
+		<link id="layuicss-layer" rel="stylesheet" href="../../css/common/qq.css">
+		<link rel="stylesheet" href="../../css/common/layui.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="../../css/common/step.css" type="text/css">
+		<link rel="stylesheet" href="https://g.alicdn.com/??buy/detail/0.0.15/aio.css">
+		<link rel="stylesheet" type="text/css" href="../../css/util/jump.css"/>
+		<script src="../../js/util/jump.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			#ie7-register-link {
+            display: none
+        }
+
+        html.lt-ie8 #register-link {
+            display: none;
+        }
+
+        html.lt-ie8 #ie7-register-link {
+            display: inline;
+        }
+        .homepage-section .col-xs-3{padding: 0 15px;}
+        .homepage-section .col-xs-3:first-child{padding-left: 0;}
+        .homepage-section .col-xs-3:last-child{padding-right: 0;}
+    </style>
+		<style>
+			.slideshow-cont {
+				background: linear-gradient(
+						to bottom,
+						#0081c6 0%,
+						#00a2e4 0%,
+						#00336f 92.4%,
+						#d9ecf7 92.5%,
+						#d9ecf7 100%
+				);
+				height: 347px;
+				min-width: 960px;
+				margin-bottom: 10px;
+			}
+    </style>
+		<style media="screen">
+			.uc-nav .un-list li a{
+		height: 36px;
+		line-height: 36px;
+	}
+	.uc-nav .un-list li a{
+		background-position: 40px -45px;
+	}
+	.uc-nav .un-list li.cur a {
+	background-position: 40px -45px;
+	color: #0483c8;
+	}
+	.uc-nav .un-list li a:hover {
+	    background-position: 40px -45px;
+	    color: #0483c8;
+	    text-decoration: none;
+	}
+	.login_tab{    
+		height: 44px;
+	    padding: 10px 30px;
+	    text-align: center;
+	    font-size: 16px;
+	    background: #0084cb;
+	    color: #fff;
+	}
+		</style>
+		<style media="screen">
+			.user_self tr td.left{
+			 width: 16%;
+			 text-align: right;
+			 padding-right: 10px;
+			}
+			.user_self tr td.btn-margin{
+			 padding-left: 70px;
+			}
+			.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+			 color: #337ab7;
+			}
+		</style>
+		<style>
+			body {background-color: #fff;}
+			  body, html {font: 400 12px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif,'5b8b4f53';color: #3D4245;background-color: #fff;-webkit-font-smoothing: antialiased;-webkit-tap-highlight-color: rgba(255,255,255,0);margin: 0;padding: 0;}
+			  body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,"5b8b4f53";-ms-overflow-style: scrollbar;}
+			  #header {height: auto!important;margin-top: 0!important;background: #fff !important;min-width: auto!important;width: auto!important;overflow: hidden;}
+			  .bought_listform .bought-listform-content{width:966px;}
+			  .bought_listform .header-item {width: 350px;}
+			  #J_trade_status #J_trade_imfor .trade-imfor-title h3 {line-height: 27px;}
+			  .totalWrap, .totalWrap table {width: 100%;}
+			  #J_trade_status .trade-status-table {width: 100%;}
+			  .flowstep {width: 100%;}
+			  .flowstep .flowstep-5 {width: 768px;margin: 45px auto;}
+			  .flowstep .flowstep-5 li {width: 192px;}
+			  .bought_listform .bought-listform-header dd {line-height: 24px;}
+			  .flowstep .detail-stepbar .step-time .step-time-min-wraper, .flowstep .detail-stepbar .step-time .step-time-wraper {width: 190px;}
+			  #nav{margin: 0}
+		</style>
+		<style type="text/css">
+			/* .flowstep .flowstep-5{
+				margin-left: 30px;
+			} */
+			.active{
+				
+			}
+			
+			#orderInfo tr td{
+				border : 0;
+				width: 33.33%;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="hd"></header>
+		<div class="block box">
+			<div id="ur_here">
+				<div class="block box">
+					<div id="ur_here">
+						当前位置: <a href="../index/index.html">首页</a> 订单详情</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="blank"></div>
+		<div class="block clearfix" style="width:1200px;margin:0 auto;overflow:hidden;">
+			<div id="left-part" class="AreaL user_AreaL" style="width:16%;float:left;"></div>
+			<div class="AreaR user_AreaR" style="width:82.5%;float:right;">
+				<div class="row">
+					<div class="table-responsive">
+					  <table id="orderInfo" class="table" >
+							  <tr>
+								  <td id="addressDetail"></td>
+								  <td id="orderNum"></td>
+							  </tr>
+							  <tr>
+								  <td id="message"></td>
+							  </tr>
+					  </table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="table-responsive">
+					  <table class="table">
+						  <thead style="background-color: #F2F2F2;color: #000000;">
+							  <tr>
+								  <td >序号</td>
+								  <td >质粒编号</td>
+								  <td >质粒名称</td>
+								  <td >费用</td>
+								  <td >数量</td>
+								  <td >状态</td>
+							  </tr>
+						  </thead>
+						  <tbody id="detailItems">
+							
+						  </tbody>
+					  </table>
+					</div>
+				</div>
+				<div class="row" style="text-align: right;">
+					<div class="col-sm-4 col-sm-offset-8" >
+						<span style="font-size: 18px;">订单总价:</span>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="totalPrice" style="font-size: 18px;font-weight: bold;"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer" id="ft"></div>
+
+		<!-- <div class="QQbox" id="divQQbox" style="width: 170px; top: 124.5px;">
+			<div class="Qlist" id="divOnline" onmouseout="hideMsgBox(event);" style="display: none; " onmouseover="OnlineOver();">
+				<div class="t"></div>
+				<div class="infobox">我们营业的时间<br>9:00-18:00</div>
+				<div class="con">
+					<ul>
+						<li>服务热线: <br>4006-120-152</li>
+					</ul>
+				</div>
+				<div class="b"></div>
+			</div>
+		</div> -->
+		<script type="text/javascript" src="../../js/common/jquery-1.11.3.min.js"></script>
+		<script src="../../js/base.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script type="text/javascript" src="../../js/common/suggest.js"></script> -->
+		<script type="text/javascript" src="../../js/common/jquery.json.js"></script>
+		<script type="text/javascript" src="../../js/common/bootstrap.js"></script>
+		<script type="text/javascript" src="../../js/common/transport_jquery.js"></script>
+		<script src="../../js/common/layer.js"></script>
+		<script src="../../js/common/layui.js"></script>
+		<script src="../../js/common/cookie.js"></script>
+		<script src="../../js/components/components.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/laypage/laypage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/order/order_detail.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/constant/constant.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

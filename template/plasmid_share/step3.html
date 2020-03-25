@@ -1,0 +1,199 @@
+<form method="POST" action="http://jiyin.org/user.php" name="geneStep3" onsubmit="return false" class="form form-condensed form-horizontal">
+	<input type="hidden" name="csrfmiddlewaretoken" value="zPurYBtAZikHqr39r8IEMh2qEStuCeQf" class="form-control">
+	<section>
+		<h2>质粒骨架信息</h2>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<input id="id_cloning-TOTAL_FORMS" name="cloning-TOTAL_FORMS" type="hidden" value="1" class="form-control"><input
+				 id="id_cloning-INITIAL_FORMS" name="cloning-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_cloning-MIN_NUM_FORMS"
+				 name="cloning-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input id="id_cloning-MAX_NUM_FORMS"
+				 name="cloning-MAX_NUM_FORMS" type="hidden" value="1" class="form-control">
+				<div class="input">
+					<div id="div_backbone" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_backbone">
+								质粒骨架名称：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-backbone" name="cloning-0-backbone" placeholder="请填写构建此质粒时所采用的质粒骨架的名称，示例：pCAMBIA1300，pET-28a"
+							 type="text" class="form-control" value="">
+						</div>
+					</div>
+					<div id="div_backbone_origin" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_backbone_origin">
+								质粒骨架来源：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-backbone_origin" maxlength="128" name="cloning-0-backbone_origin" type="text" class="form-control"
+							 value="" placeholder="请填写质粒骨架的构建者或者生产商，示例：Invitrogen公司，Feng Zhang">
+						</div>
+					</div>
+					<div id="div_backbone_size" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_backbone_size">
+								质粒骨架大小(bp)：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-backbone_size" name="cloning-0-backbone_size" placeholder="原始质粒骨架的大小（不包括插入基因）；如果不确定，可填写预估值"
+							 type="number" class="form-control" value="">
+						</div>
+					</div>
+					<div id="div_total_vector_size" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_total_vector_size">
+								质粒大小(bp)：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-total_vector_size" name="cloning-0-total_vector_size" placeholder="质粒总大小（包括插入基因）；如果不确定，可填写预估值"
+							 type="number" class="form-control" value="">
+						</div>
+					</div>
+
+					<div id="div_backbone_mutation" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_backbone_mutation">
+								质粒骨架的修饰/改造：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<textarea cols="40" id="id_cloning-0-backbone_mutation" name="cloning-0-backbone_mutation" rows="10" value=""
+							 class="form-control" placeholder="构建载体过程中，是否对质粒骨架进行过改造，如有请填写，示例：将质粒骨架中的GUS报告基因切除、将质粒骨架中的zeocin抗性基因替换为puromycin 抗性基因"></textarea>
+						</div>
+					</div>
+					<div id="div_vector_type" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_vector_type">
+								表达系统（可复选）：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<table class="table table-no-border checkbox-table">
+								<tbody>
+									<tr>
+										<td>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_0"><input id="id_cloning-0-vector_type_0" name="cloning-0-vector_type"
+													 type="checkbox" value="101">哺乳动物表达载体（Mammalian Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_1"><input id="id_cloning-0-vector_type_1" name="cloning-0-vector_type"
+													 type="checkbox" value="102">昆虫表达载体（Insect Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_2"><input id="id_cloning-0-vector_type_2" name="cloning-0-vector_type"
+													 type="checkbox" value="103">植物表达载体（Plant Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_3"><input id="id_cloning-0-vector_type_3" name="cloning-0-vector_type"
+													 type="checkbox" value="104">线虫表达载体（Nematode Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_4"><input id="id_cloning-0-vector_type_4" name="cloning-0-vector_type"
+													 type="checkbox" value="105">原核表达载体（Bacterial Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_5"><input id="id_cloning-0-vector_type_5" name="cloning-0-vector_type"
+													 type="checkbox" value="106">斑马鱼表达载体（Zebrafish Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_6"><input id="id_cloning-0-vector_type_6" name="cloning-0-vector_type"
+													 type="checkbox" value="107">酵母表达载体（Yeast Expression）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_7"><input id="id_cloning-0-vector_type_7" name="cloning-0-vector_type"
+													 type="checkbox" value="108"> 无细胞表达载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_8"><input id="id_cloning-0-vector_type_8" name="cloning-0-vector_type"
+													 type="checkbox" value="109"> 其他</label></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="div_vector_type_other" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_vector_type_other">
+								表达系统信息：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-vector_type_other" maxlength="128" placeholder="如果勾选其他选项，请填写相应的表达系统信息" name="cloning-0-vector_type_other1"
+							 type="text" class="form-control" value="">
+						</div>
+					</div>
+					<div id="div_vector_type1" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_vector_type1">
+								质粒的功能/用途：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<table class="table table-no-border checkbox-table">
+								<tbody>
+									<tr>
+										<td>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_11"><input id="id_cloning-0-vector_type_11" name="cloning-0-vector_type1"
+													 type="checkbox" value="111">慢病毒载体（Lentiviral ）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_12"><input id="id_cloning-0-vector_type_12" name="cloning-0-vector_type1"
+													 type="checkbox" value="112">逆转录病毒载体（Retroviral） </label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_13"><input id="id_cloning-0-vector_type_13" name="cloning-0-vector_type1"
+													 type="checkbox" value="113">腺病毒载体（Adenoviral ）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_14"><input id="id_cloning-0-vector_type_14" name="cloning-0-vector_type1"
+													 type="checkbox" value="114">腺相关病毒载体（AAV）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_15"><input id="id_cloning-0-vector_type_15" name="cloning-0-vector_type1"
+													 type="checkbox" value="115">RNAi 载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_16"><input id="id_cloning-0-vector_type_16" name="cloning-0-vector_type1"
+													 type="checkbox" value="116">Cre/Lox 载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_17"><input id="id_cloning-0-vector_type_17" name="cloning-0-vector_type1"
+													 type="checkbox" value="120">TALEN 载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_18"><input id="id_cloning-0-vector_type_18" name="cloning-0-vector_type1"
+													 type="checkbox" value="117">CRISPR 载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_19"><input id="id_cloning-0-vector_type_19" name="cloning-0-vector_type1"
+													 type="checkbox" value="118">过表达载体</label></div>
+										</td>
+										<td>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_21"><input id="id_cloning-0-vector_type_21" name="cloning-0-vector_type1"
+													 type="checkbox" value="119">诱导表达载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_22"><input id="id_cloning-0-vector_type_22" name="cloning-0-vector_type1"
+													 type="checkbox" value="121">基因克隆载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_23"><input id="id_cloning-0-vector_type_23" name="cloning-0-vector_type1"
+													 type="checkbox" value="122">报告基因载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_24"><input id="id_cloning-0-vector_type_24" name="cloning-0-vector_type1"
+													 type="checkbox" value="123">荧光素酶报告载体（Luciferase）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_25"><input id="id_cloning-0-vector_type_25" name="cloning-0-vector_type1"
+													 type="checkbox" value="124">荧光蛋白表达载体（Fluorescent Proteins）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_26"><input id="id_cloning-0-vector_type_26" name="cloning-0-vector_type1"
+													 type="checkbox" value="125">酵母杂交载体</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_27"><input id="id_cloning-0-vector_type_27" name="cloning-0-vector_type1"
+													 type="checkbox" value="126">基因打靶载体 </label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_28"><input id="id_cloning-0-vector_type_28" name="cloning-0-vector_type1"
+													 type="checkbox" value="127">合成生物学相关（Synthetic Biology ）</label></div>
+											<div class="checkbox"><label for="id_cloning-0-vector_type_29"><input id="id_cloning-0-vector_type_29" name="cloning-0-vector_type1"
+													 type="checkbox" value="128">其他</label></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="div_vector_type_other" class="form-group deposit-field deposit-field-horizontal">
+						<div class="label-container col-xs-4">
+							<label class="control-label" for="id_vector_type_other">
+								质粒功能/用途信息：
+							</label>
+						</div>
+						<div class="field-container col-xs-8">
+							<input id="id_cloning-0-vector_type_other" maxlength="128" placeholder="如果勾选其他选项，请填写相应的质粒功能/用途信息" name="cloning-0-vector_type_other"
+							 type="text" class="form-control" value="">
+						</div>
+					</div>
+					<div style="display: none;"><input id="id_cloning-0-plasmid" name="cloning-0-plasmid" type="hidden" value="104327"
+						 class="form-control"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="step2-to-step3">
+		<h2>基因克隆信息</h2>
+	</section>
+	<ul class="list-inline edit-plasmid-save-buttons">
+		<li>
+			<input name="plasmid_name" type="hidden" value="pEGFP">
+			<input name="share_id" type="hidden" value="1000004">
+			<input type="hidden" name="plasmid_type" value="700">
+			<input type="submit" name="next" class="spinner-after-post btn btn-success btn-sm" value="保存并进行下一步" id="save-continue-button"
+			 onclick="step3Next()">
+		</li>
+	</ul>
+</form>
+</div>

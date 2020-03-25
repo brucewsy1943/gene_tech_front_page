@@ -1,0 +1,374 @@
+<div class="well well-sm bg-info">
+	请尽可能详细的提供有关此质粒的信息与资源：包括质粒序列、质粒图谱、相关文献、支持文件、操作指南等，以便基因云网站以及其他科研工作者可以更详细的了解您所分享的质粒信息。
+</div>
+<form enctype="multipart/form-data" method="POST" action="http://jiyin.org/user.php?act=step_1_save" name="plasmidStep1"
+ class="form form-condensed form-horizontal" onsubmit="return false">
+	<input type="hidden" name="csrfmiddlewaretoken" value="yliosCAqfZyBVH1uCMVK7hYl1SKcY238" class="form-control">
+	<section>
+		<h2>质粒序列</h2>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<label>你有这个质粒的全部或部分序列吗？</label>
+				<div class="yes-no-q" onyes="sequence-list">
+					<div class="answers btn-group"><a href="javascript:void(0);" onclick="isTrue(this,&#39;sequence-list&#39;);" class="btn btn-default active">是</a>
+						<a href="javascript:void(0);" onclick="isTrue(this,&#39;sequence-list&#39;);" class="btn btn-default">否</a></div>
+				</div>
+				<div class="clear-left"></div>
+				<div id="sequence-list" style="display: block;">
+					<p>请提供质粒的完整序列信息，如果您没有质粒的完整序列，您也可以提供质粒部分区段的序列信息。您可以通过上传序列文件或者直接输入序列进行信息的提交。</p>
+					<p>
+						如果您拥有相关序列文件（完整序列或者部分序列信息），您可以在下方直接上传。注意：序列文件支持的格式有：<span style="color:red;">gb、gbk、seq、fasta、txt，</span>上传的文件不能超过<span
+						 style="color:red;">5</span>个，文件大小不超过<span style="color:red;">300kb</span>。</p>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<strong>添加GenBank文件</strong>
+						</div>
+						<div class="panel-body">
+							<div class="layui-upload">
+								<button type="button" class="layui-btn layui-btn-normal" id="testList">选择要上传的文件</button><input class="layui-upload-file"
+								 type="file" name="file" multiple="">
+								<button type="button" class="layui-btn" id="testListAction">开始上传</button>
+								<div class="layui-upload-list">
+									<table class="layui-table">
+										<thead>
+											<tr>
+												<th>文件名</th>
+												<th>大小</th>
+												<th>状态</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody id="demoList">
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<p>您也可以在下方直接输入序列信息，如果含有多条序列信息，可以点击下方的“添加另一条”按钮，进行序列信息的添加。</p>
+					<input id="id_sequence-TOTAL_FORMS" name="sequence-TOTAL_FORMS" type="hidden" value="5" class="form-control"><input
+					 id="id_sequence-INITIAL_FORMS" name="sequence-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_sequence-MIN_NUM_FORMS" name="sequence-MIN_NUM_FORMS" type="hidden" value="0" class="form-control"><input
+					 id="id_sequence-MAX_NUM_FORMS" name="sequence-MAX_NUM_FORMS" type="hidden" value="5" class="form-control">
+					<ul id="more-sequence" class="more-inputs list-unstyled">
+						<li class="p2 sequence-form" style="display: list-item;">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong>添加新序列</strong>
+								</div>
+								<div class="panel-body">
+									<div id="div_is_full" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_is_full">
+												全部或部分序列：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<select id="id_sequence-0-is_full" name="sequence-0-is_full" class="form-control">
+												<option value="" selected="selected">---------</option>
+												<option value="全部质粒序列">全部质粒序列</option>
+												<option value="部分序列">部分序列</option>
+											</select>
+										</div>
+									</div>
+									<div id="div_description" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_description">
+												描述，例如所使用的区域覆盖或引物：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<input id="id_sequence-0-description" maxlength="128" name="sequence-0-description" type="text" class="form-control">
+										</div>
+									</div>
+									<div id="div_sequence" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_sequence">
+												序列：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<textarea cols="40" style="height:150px;" id="id_sequence-0-sequence" name="sequence-0-sequence" rows="10"
+											 class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="">
+						<span id="add-new-sequence" class="show-more btn  btn-primary">添加新质粒序列
+						</span></div>
+					<script type="text/javascript">
+						$(function() {
+							var i = ($("#more-sequence li").length) - 1;
+							$("#add-new-sequence").click(function() {
+								if ($("#more-sequence li").length < 5) {
+									i++;
+									var str = '<li class="p2 sequence-form" style="display: list-item;">' +
+										'<div class="panel panel-default">' +
+										'<div class="panel-heading">' +
+										'<strong>输入序列</strong>' +
+										'</div>' +
+										'<div class="panel-body">' +
+										'<div id="div_is_full" class="form-group deposit-field deposit-field-horizontal">' +
+										'<div class="label-container col-xs-4">' +
+										'<label class="control-label" for="id_is_full">' +
+										'序列完整度：' +
+										'</label>' +
+										'</div>' +
+										'<div class="field-container col-xs-8">' +
+										'<select id="id_sequence-' + i + '-is_full"' +
+										'name="sequence-' + i + '-is_full" class="form-control">' +
+										'<option value="" selected="selected">---------</option>' +
+										'<option value="全部质粒序列">全部质粒序列</option>' +
+										'<option value="部分序列">部分序列</option>' +
+										'</select>' +
+										'</div>' +
+										'</div>' +
+										'<div id="div_description" class="form-group deposit-field deposit-field-horizontal">' +
+										'<div class="label-container col-xs-4">' +
+										'<label class="control-label" for="id_description">' +
+										'序列描述：' +
+										'</label>' +
+										'</div>' +
+										'<div class="field-container col-xs-8">' +
+										'<input id="id_sequence-' + i + '-description" maxlength="128" name="sequence-' + i +
+										'-description" type="text" class="form-control">' +
+										'</div>' +
+										'</div>' +
+										'<div id="div_sequence"' +
+										'class="form-group deposit-field deposit-field-horizontal">' +
+										'<div class="label-container col-xs-4">' +
+										'<label class="control-label" for="id_sequence">' +
+										'序列：' +
+										'</label>' +
+										'</div>' +
+										'<div class="field-container col-xs-8">' +
+										'<textarea style="height:150px;" cols="40" id="id_sequence-' + i + '-sequence" name="sequence-' + i +
+										'-sequence" rows="10" class="form-control"></textarea>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</li>';
+									$("#more-sequence").append(str);
+								} else {
+									layer.alert("最多添加五个序列哦！")
+								}
+							})
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>质粒图</h2>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<label>您是否拥有此质粒的图谱信息？如果拥有，请上传。</label>
+				<div class="yes-no-q" onyes="map-list">
+					<div class="answers btn-group"><a href="javascript:void(0);" onclick="isTrue(this,&#39;map-list&#39;);" class="btn btn-default">是</a>
+						<a href="javascript:void(0);" onclick="isTrue(this,&#39;map-list&#39;);" class="btn btn-default active">否</a></div>
+				</div>
+				<div class="clear-left"></div>
+				<div id="map-list" style="display: none;">
+					<p>注意：质粒图谱支持的格式有：JPEG，PNG，上传的文件不能超过3个，文件大小不超过800kb。</p>
+					<input id="id_map-TOTAL_FORMS" name="map-TOTAL_FORMS" type="hidden" value="3" class="form-control"><input id="id_map-INITIAL_FORMS"
+					 name="map-INITIAL_FORMS" type="hidden" value="0" class="form-control"><input id="id_map-MIN_NUM_FORMS" name="map-MIN_NUM_FORMS"
+					 type="hidden" value="0" class="form-control"><input id="id_map-MAX_NUM_FORMS" name="map-MAX_NUM_FORMS" type="hidden"
+					 value="3" class="form-control">
+					<ul class="more-inputs list-unstyled">
+						<li class="clear" style="display: list-item;">
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>上传质粒图谱</strong></div>
+								<div class="panel-body">
+									<div class="layui-upload">
+										<button type="button" class="layui-btn layui-btn-normal" id="testList1">选择要上传的图片</button><input class="layui-upload-file"
+										 type="file" name="file" multiple="">
+										<button type="button" class="layui-btn" id="testListAction1">开始上传</button>
+										<div class="layui-upload-list">
+											<table class="layui-table">
+												<thead>
+													<tr>
+														<th>图片名</th>
+														<th>大小</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody id="demoList1">
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>相关文献</h2>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<label>您所发表的学术著作中是否涉及此质粒的应用？如果涉及，请填写相关学术文献。</label>
+				<div class="yes-no-q" onyes="map-list">
+					<div class="answers btn-group"><a href="javascript:void(0);" onclick="isTrue(this,&#39;about-article&#39;);" class="btn btn-default">是</a>
+						<a href="javascript:void(0);" onclick="isTrue(this,&#39;about-article&#39;);" class="btn btn-default active">否</a></div>
+				</div>
+				<div id="about-article" style="display: none;">
+					<ul class="more-inputs list-unstyled">
+						<li class="p2 sequence-form" style="display: list-item;">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong>添加文献信息</strong>
+								</div>
+								<div class="panel-body">
+									<div id="div_description" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_description">
+												相关学术文献PubMed ID：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<input id="article-id" placeholder="示例:24157548 " maxlength="128" value="" name="article-id" type="text"
+											 class="form-control">
+										</div>
+									</div>
+									<div id="div_sequence" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-4">
+											<label class="control-label" for="id_sequence">
+												请填写相关学术文献信息：
+											</label>
+										</div>
+										<div class="field-container col-xs-8">
+											<textarea cols="40" id="article-news" placeholder="示例：Ran F A, Hsu P D, Wright J, et al. Genome engineering using the CRISPR-Cas9 system[J]. Nature protocols, 2013, 8(11): 2281-2308.
+                                                                "
+											 name="article-news" rows="10" class="form-control"></textarea>
+										</div>
+									</div>
+									<div style="display: none;"><input id="id_sequence-0-id" name="sequence-0-id" type="hidden" class="form-control"></div>
+									<div style="display: none;"><input id="id_sequence-0-plasmid" name="sequence-0-plasmid" type="hidden" value="103068"
+										 class="form-control"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>支持文件</h2>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<label>
+					<p>您是否拥有此质粒的相关支持文档（例如文献、操作指南、说明书等）？如果拥有，请上传或者直接输入。支持文档可以让其他科研人员更好的操作您分享的质粒。</p>
+				</label>
+				<div class="yes-no-q" onyes="attachment-list">
+					<div class="answers btn-group"><a href="javascript:void(0);" onclick="isTrue(this,&#39;attachment-list&#39;);"
+						 class="btn btn-default">是</a>
+						<a href="javascript:void(0);" onclick="isTrue(this,&#39;attachment-list&#39;);" class="btn btn-default active">否</a></div>
+				</div>
+				<div class="clear-left"></div>
+				<div id="attachment-list" style="display: none;">
+					<p>注意：文档所支持的格式有：PDF，WORD，TXT；上传的文件不能超过3个，文件大小不超过800kb。</p>
+					<div class="panel panel-default">
+						<div class="panel-heading"><strong>上传新项目</strong></div>
+						<div class="panel-body">
+							<div class="layui-upload">
+								<button type="button" class="layui-btn layui-btn-normal" id="testList2">选择要上传的文章</button><input class="layui-upload-file"
+								 type="file" name="file" multiple="">
+								<button type="button" class="layui-btn" id="testListAction2">开始上传</button>
+								<div class="layui-upload-list">
+									<table class="layui-table">
+										<thead>
+											<tr>
+												<th>图片名</th>
+												<th>大小</th>
+												<th>状态</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody id="demoList2">
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>您也可以在下方直接输入相关文档信息，如果含有多条信息，可以点击下方的“添加另一条”按钮，进行信息的添加。</p>
+					<ul id="more-about-data" class="more-inputs list-unstyled">
+						<li class="p2 data-form" style="display: list-item;">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong>文档内容输入</strong>
+								</div>
+								<div class="panel-body">
+									<div id="div_sequence" class="form-group deposit-field deposit-field-horizontal">
+										<div class="label-container col-xs-2">
+											<label class="control-label" for="id_sequence">
+												文档详细内容：
+											</label>
+										</div>
+										<div class="field-container col-xs-10">
+											<textarea cols="40" id="about-data" name="about-data0" rows="10" style="height:100px;" class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div><span id="other-about-data" class="show-more btn btn-primary">添加另一条</span></div>
+					<script type="text/javascript">
+						$(function() {
+							var k = ($("#more-about-data li").length) - 1;
+							$("#other-about-data").click(function() {
+								if ($("#more-about-data li").length < 3) {
+									k++;
+									var str1 = '<li class="p2 data-form" style="display: list-item;">' +
+										'<div class="panel panel-default">' +
+										'<div class="panel-heading">' +
+										'<strong>文档内容输入</strong>' +
+										'</div>' +
+										'<div class="panel-body">' +
+										'<div id="div_sequence" class="form-group deposit-field deposit-field-horizontal">' +
+										'<div class="label-container col-xs-2">' +
+										'<label class="control-label" for="id_sequence">' +
+										'文档详细内容：' +
+										'</label>' +
+										'</div>' +
+										'<div class="field-container col-xs-10">' +
+										'<textarea cols="40" id="about-data' + k + '" name="about-data' + k +
+										'" rows="10" style="height:100px;" class="form-control"></textarea>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</div>' +
+										'</li>';
+									$("#more-about-data").append(str1);
+								} else {
+									layer.alert("最多添加三份相关资料哦！")
+								}
+							})
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+	</section>
+	<ul class="list-inline edit-plasmid-save-buttons">
+		<li>
+			<input name="plasmid_name" type="hidden" value="pEGFP">
+			<input name="share_id" type="hidden" value="1000004">
+			<input type="hidden" name="plasmid_type" value="700">
+			<input type="submit" name="next" onclick="step1Next()" class="spinner-after-post btn btn-success btn-sm" value="保存并进入下一步"
+			 id="save-continue-button">
+		</li>
+	</ul>
+</form>

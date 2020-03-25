@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery新闻上下滚动-jq22.com</title>
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+	#donate_carousel {
+		height:300px;
+		overflow:hidden;
+	}
+	.donate_bar {
+		margin-left:30px;
+		padding:0;
+		line-height:25px;
+	}
+	.donate_bar li {
+		height:25px;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.donate_bar span {
+		font-size:8px;
+		color:royalblue;
+		margin-left:0;
+	}
+	.donate_bar a {
+		text-decoration:none;
+		font-size:14px;
+		color:#666;
+	}
+</style>
+</head>
+<body>
+<div id="donate_carousel">
+  <ul class="donate_bar">
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">江苏科技大学校友网正式开通</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">关于修改《江苏科技大学校友会章...</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href=""> 江苏科技大学广西校友会成立 </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">关于江苏科技大学校友会理事候选... </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">江苏科技大学校友网正式开通</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">关于修改《江苏科技大学校友会章...</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href=""> 江苏科技大学广西校友会成立 </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">关于江苏科技大学校友会理事候选... </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">江苏科技大学校友网正式开通</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href="">关于修改《江苏科技大学校友会章...</a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href=""> 江苏科技大学广西校友会成立 </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href=""> 江苏科技大学广西校友会成立 </a> </li>
+    <li> <span class="glyphicon glyphicon-play"></span> <a href=""> 江苏科技大学广西校友会成立 </a> </li>
+  </ul>
+</div>
+
+<script>
+$.fn.extend({
+    Scroll: function(opt, callback) {
+        //参数初始化
+        if (!opt) var opt = {};
+        var _this = this.eq(0).find("ul:first");
+        var lineH = _this.find("li:first").height(), //获取行高
+            line = opt.line ? parseInt(opt.line, 10) : parseInt(this.height() / lineH, 10), //每次滚动的行数，默认为一屏，即父容器高度
+            speed = opt.speed ? parseInt(opt.speed, 10) : 500, //卷动速度，数值越大，速度越慢（毫秒）
+            timer = opt.timer ? parseInt(opt.timer, 10) : 3000; //滚动的时间间隔（毫秒）
+
+        if (line == 0) line = 1;
+        var upHeight = 0 - line * lineH;
+        //滚动函数
+        scrollUp = function() {
+            _this.animate({
+                marginTop: upHeight
+            }, speed, function() {
+                for (i = 1; i <= line; i++) {
+                    _this.find("li:first").appendTo(_this);
+                }
+                _this.css({
+                    marginTop: 0
+                });
+            });
+        }
+        //鼠标事件绑定
+        _this.hover(function() {
+            clearInterval(timerID);
+        }, function() {
+            timerID = setInterval("scrollUp()", timer);
+        }).mouseout();
+    }
+})
+$(function() {
+    $('#donate_carousel').Scroll({
+        line: 1,
+        speed: 800,
+        timer: 2000
+    });
+});
+</script>
+
+</body>
+</html>
