@@ -142,7 +142,7 @@ function getPiInfo(){
 					}else if(index == 5){
 						$(this).val(userInfo.pi_name);
 					}else if(index == 6){
-						$(this).val(userInfo.pi_phone);
+						$(this).val(userInfo.pi_email);
 					}
 				})
 			},

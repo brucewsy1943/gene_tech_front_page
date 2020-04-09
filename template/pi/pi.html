@@ -48,6 +48,9 @@
 			#piInputs .col-sm-10{
 				padding-left:0 ;
 			}
+			#piInputs label{
+				text-align: right;
+			}
 		</style>
 	</head>
 	<body>
@@ -108,45 +111,51 @@
 						<form id="piContent" class="form-horizontal">
 							<div id="piInputs" class="row">
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">真实姓名：</label>
+									<label class="col-sm-2 control-label">真实姓名：</label>
 									<div class="col-sm-10">
 										<input name="real_name" type="text" class="form-control" placeholder="真实姓名">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">所在机构：</label>
+									<label class="col-sm-2 control-label">所在机构：</label>
 									<div class="col-sm-10">
 										<input name="institute" type="text" class="form-control" placeholder="所在机构">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">移动电话：</label>
+									<label class="col-sm-2 control-label">移动电话：</label>
 									<div class="col-sm-10 ">
 										<input name="telephone" type="text" class="form-control" placeholder="移动电话">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">邮箱信息：</label>
+									<label class="col-sm-2 control-label">个人单位邮箱：</label>
 									<div class="col-sm-10">
-										<input name="email" type="text" class="form-control" placeholder="邮箱信息">
+										<input name="email" type="text" class="form-control" placeholder="单位邮箱">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">机构地址：</label>
+									<label class="col-sm-2 control-label">机构地址：</label>
 									<div class="col-sm-10">
 										<input name="institute_address" type="text" class="form-control" placeholder="机构地址">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">PI 姓名：</label>
+									<label class="col-sm-2 control-label">PI 姓名：</label>
 									<div class="col-sm-10">
 										<input name="pi_name" type="text" class="form-control" placeholder="PI 姓名">
 									</div>
 								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label" style="text-align:center">PI 电话：</label>
+								<!-- <div class="form-group">
+									<label class="col-sm-2 control-label">PI 邮箱：</label>
 									<div class="col-sm-10">
 										<input name="pi_phone" type="text" class="form-control" placeholder="PI 电话">
+									</div>
+								</div> -->
+								<div class="form-group">
+									<label class="col-sm-2 control-label">PI 邮箱：</label>
+									<div class="col-sm-10">
+										<input name="pi_email" type="text" class="form-control" placeholder="PI 邮箱">
 									</div>
 								</div>
 								<div class="form-group">

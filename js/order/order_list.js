@@ -264,7 +264,7 @@ function cancel_order(orderDetailId) {
 	layuiConfirm("确定要取消吗？",cancel_order_request,orderDetailId);
 }
 
-function cancel_order_request(orderDetailId,status){
+function cancel_order_request(orderDetailId){
 	//layuiAlert(orderDetailId);
 	//订单状态 0：未付款 1：待发货 2：待收货 3：完成 4：取消
 	$.ajax({
@@ -275,7 +275,7 @@ function cancel_order_request(orderDetailId,status){
 		},
 		data:{
 			'orderDetailId':orderDetailId,
-			'status':status
+			'status':4
 		},
 		async:false,
 		success:function(res){
@@ -285,8 +285,6 @@ function cancel_order_request(orderDetailId,status){
 			}
 			//重新搜索
 			search(1,10);
-			
-			
 			
 		}
 	})

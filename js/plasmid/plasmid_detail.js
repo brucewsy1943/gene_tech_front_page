@@ -129,7 +129,7 @@ function rewriteRemark(remark){
 		var end = remark.length;
 		var href = remark.substring(start,end);
 		var other = remark.substring(0,start);
-		var remarkHtml = other + "<a style='font-weight:bold'" + " href = " + href +">" + href + "</a>";
+		var remarkHtml = other + "<a target='_blank' style='font-weight:bold'" + " href = " + href +">" + href + "</a>";
 		return remarkHtml;
 	}
 	return remark;

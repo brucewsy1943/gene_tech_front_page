@@ -22,7 +22,7 @@ function getOrderDetails(){
 			for (var i = 0; i < orderDetails.length; i++) {
 				var goodsName = orderDetails[i].goods_name;
 				var goodsNum = orderDetails[i].goods_num;
-				var price = orderDetails[i].money;
+				var price = orderDetails[i].sumary;
 				var pay_type = orderDetails[i].pay_type;
 				var orderStatus = orderDetails[i].orderStatus;
 				var productCode = orderDetails[i].productCode;

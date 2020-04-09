@@ -63,43 +63,49 @@
 						<div class="userCenterBox boxCenterList clearfix usBox  panel panel-default" style="_height:1%;">
 							<div class="invoice">
 								<h5 class="user_title" style="height:44px;line-height:44px;"><strong><span>发票信息</span></strong></h5>
-								<form id="invoiceContent" class="user_self" name="formEdit" method="post" onsubmit="return invoice()">
+								<form id="invoiceContent" class="user_self">
 									<table border="0" cellpadding="5" width="100%" cellspacing="1" bgcolor="#dddddd">
 										<tbody>
 											<tr>
 												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>发票抬头：</strong></td>
 												<td bgcolor="#FFFFFF">
-													<input name="title" value="" type="text" size="25" id="check_fptt" class="inputBg" >
+													<input id="title" name="title" value="" type="text" size="25" id="check_fptt" class="inputBg" >
 													<span id="is_fptt" style="color:#FF0000"></span>
 												</td>
 											</tr>
 											<tr>
 												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>纳税人识别号：</strong></td>
 												<td bgcolor="#FFFFFF">
-													<input name="taxpayer_number" value="" type="text" size="25" id="check_nsrsbh" class="inputBg" >
+													<input id="taxpayer_number" name="taxpayer_number" value="" type="text" size="25" id="check_nsrsbh" class="inputBg" >
 													<span id="is_nsrsbh" style="color:#FF0000"></span>
 												</td>
 											</tr>
 											<tr>
-												<td bgcolor="#FFFFFF" class="left"><strong>注册地址：</strong></td>
-												<td bgcolor="#FFFFFF">
-													<input name="regist_address" value="" type="text" size="25" class="inputBg">
+												<td>
+													<strong>&ensp;&ensp;是否开具专业发票：</strong>
+													<input name="need_pro_inv" id="isProfessionalInvoiceNeeded" type="checkbox" class="input" value="" checked="">
 												</td>
 											</tr>
 											<tr>
-												<td bgcolor="#FFFFFF" class="left"><strong>注册电话：</strong></td>
-												<td bgcolor="#FFFFFF"><input name="regist_phone" value="" type="text" size="25" class="inputBg"></td>
+												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>注册地址：</strong></td>
+												<td bgcolor="#FFFFFF">
+													<input id="regist_address" name="regist_address" value="" type="text" size="25" class="inputBg">
+												</td>
 											</tr>
 											<tr>
-												<td bgcolor="#FFFFFF" class="left"><strong>开户银行：</strong></td>
-												<td bgcolor="#FFFFFF"><input name="open_bank" value="" type="text" size="25" class="inputBg"></td>
+												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>注册电话：</strong></td>
+												<td bgcolor="#FFFFFF"><input id="regist_phone" name="regist_phone" value="" type="text" size="25" class="inputBg"></td>
 											</tr>
 											<tr>
-												<td bgcolor="#FFFFFF" class="left"><strong>开户账号：</strong></td>
-												<td bgcolor="#FFFFFF"><input name="open_account" value="" type="text" size="25" class="inputBg"></td>
+												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>开户银行：</strong></td>
+												<td bgcolor="#FFFFFF"><input id="open_bank" name="open_bank" value="" type="text" size="25" class="inputBg"></td>
+											</tr>
+											<tr>
+												<td bgcolor="#FFFFFF" class="left"><em class="red">*</em><strong>开户账号：</strong></td>
+												<td bgcolor="#FFFFFF"><input id="open_account" name="open_account" value="" type="text" size="25" class="inputBg"></td>
 											</tr>
 											<input type="hidden" name="id" value="" />
-											<tr>
+											<tr id="submitButton">
 												<td colspan="2" bgcolor="#FFFFFF" style="text-align: center;height: 130px;">
 													<!-- <input name="act" type="hidden" value="act_invoice_information"> -->
 													<!-- <input onclick="submitModifyInvoice()" name="submit" type="button" class="btn btn-primary" style="border:none;height: 34px;width: 95px;" value="确认修改"> -->

@@ -33,9 +33,8 @@ function layuiConfirm(messsage, Function,id) {
 		btn: ['确定', '取消'] //可以无限个按钮
 	},function(index) {
 		//按钮【按钮二】的回调
-		Function(id);	
-	},function(index) {
-		//按钮【按钮二】的回调
+		Function(id);
+		layer.close(index);
 	});
 }
 
