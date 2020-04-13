@@ -1,0 +1,11 @@
+/**
+ * 文章部分
+ */
+#content a{
+	font-weight:bold;
+	text-decoration:underline;
+	word-wrap:break-word;
+}
+#content p{
+	font-size: 1.6rem;
+}
